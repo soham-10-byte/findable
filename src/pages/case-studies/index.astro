@@ -8,8 +8,8 @@ const pageTitle = 'SEO and AI Visibility Case Studies | Findable';
 const pageDescription = 'Real technical case studies and measurable performance teardowns showing how we build search dominance and AI answer citations.';
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://TODO_DOMAIN/' },
-  { name: 'Case Studies', url: 'https://TODO_DOMAIN/case-studies' },
+  { name: 'Home', url: 'https://findableseo.vercel.app/' },
+  { name: 'Case Studies', url: 'https://findableseo.vercel.app/case-studies' },
 ];
 
 const caseStudies = await getCollection('case-studies');
@@ -23,7 +23,7 @@ caseStudies.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
     type: 'CollectionPage',
     title: pageTitle,
     description: pageDescription,
-    url: 'https://TODO_DOMAIN/case-studies',
+    url: 'https://findableseo.vercel.app/case-studies',
     breadcrumbs,
   }}
 >

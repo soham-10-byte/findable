@@ -23,11 +23,11 @@ const { Content } = await post.render();
 
 const pageTitle = `${post.data.title} | Findable`;
 const pageDescription = post.data.description;
-const canonicalURL = `https://TODO_DOMAIN/blog/${post.slug}`;
+const canonicalURL = `https://findableseo.vercel.app/blog/${post.slug}`;
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://TODO_DOMAIN/' },
-  { name: 'Blog', url: 'https://TODO_DOMAIN/blog' },
+  { name: 'Home', url: 'https://findableseo.vercel.app/' },
+  { name: 'Blog', url: 'https://findableseo.vercel.app/blog' },
   { name: post.data.title, url: canonicalURL },
 ];
 

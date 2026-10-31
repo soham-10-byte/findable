@@ -9,8 +9,8 @@ const pageTitle = 'SEO, AEO and GEO Blog | Findable';
 const pageDescription = 'Technical teardowns, search optimization guides, and generative AI citation strategies from the engineering team at Findable.';
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://TODO_DOMAIN/' },
-  { name: 'Blog', url: 'https://TODO_DOMAIN/blog' },
+  { name: 'Home', url: 'https://findableseo.vercel.app/' },
+  { name: 'Blog', url: 'https://findableseo.vercel.app/blog' },
 ];
 
 const posts = await getCollection('blog');
@@ -24,7 +24,7 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
     type: 'CollectionPage',
     title: pageTitle,
     description: pageDescription,
-    url: 'https://TODO_DOMAIN/blog',
+    url: 'https://findableseo.vercel.app/blog',
     breadcrumbs,
   }}
 >

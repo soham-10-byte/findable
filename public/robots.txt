@@ -1,0 +1,7 @@
+# Findable robots.txt
+# All crawlers (search engines and AI search bots) are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://findableseo.vercel.app/sitemap-index.xml
+Sitemap: https://findableseo.vercel.app/sitemap.xml
