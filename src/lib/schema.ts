@@ -44,7 +44,9 @@ export function buildPageSchema(options: PageSchemaOptions) {
   const orgId = `${baseDomain}/#organization`;
   const websiteId = `${baseDomain}/#website`;
   const founderId = `${baseDomain}/#founder`;
-  const webpageId = `${options.url.replace(/\/+$/, '')}#webpage`;
+  const rawUrl = (options.url && !options.url.includes('TODO_DOMAIN')) ? options.url : siteConfig.url;
+  const cleanUrl = rawUrl.replace(/\/+$/, '');
+  const webpageId = `${cleanUrl}/#webpage`;
 
   // Filter valid sameAs (exclude TODO markers)
   const sameAsList = Object.values(siteConfig.socials).filter(
@@ -107,7 +109,7 @@ export function buildPageSchema(options: PageSchemaOptions) {
   const webpageEntity: any = {
     '@type': pageType,
     '@id': webpageId,
-    url: options.url,
+    url: rawUrl,
     name: options.title,
     description: options.description,
     isPartOf: { '@id': websiteId },
