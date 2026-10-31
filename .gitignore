@@ -6,9 +6,7 @@ dist/
 node_modules/
 
 # Environment files
-.env
-.env.production
-.env.local
+.env*
 
 # IDE & OS
 .DS_Store
