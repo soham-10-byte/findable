@@ -1,0 +1,380 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Icon from '../../components/ui/Icon.astro';
+import Card from '../../components/ui/Card.astro';
+import Faq from '../../components/ui/Faq.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+const pageTitle = 'Answer Engine Optimization (AEO) Services | Findable';
+const pageDescription = 'Capture zero-click searches, Google AI Overviews, and featured snippets with specialized Answer Engine Optimization (AEO) services from Findable.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Services', url: 'https://TODO_DOMAIN/services' },
+  { name: 'AEO Services', url: 'https://TODO_DOMAIN/services/aeo' },
+];
+
+const faqs = [
+  {
+    question: 'What is Answer Engine Optimization (AEO)?',
+    answer: 'Answer Engine Optimization (AEO) is the technical and editorial discipline of structuring website content so search engines and answer engines (like Google AI Overviews, Siri, and Perplexity) extract, quote, and feature your business as the definitive direct answer to user queries.',
+  },
+  {
+    question: 'How does AEO differ from traditional SEO?',
+    answer: 'Traditional SEO targets rankings across the standard ten blue links. AEO formats your content modularly to win the single coveted answer slot in featured snippets, People Also Ask boxes, and conversational AI summaries where user intent demands instant clarity.',
+  },
+  {
+    question: 'Does Google still show FAQ and HowTo rich snippets?',
+    answer: 'Google significantly restricted FAQ rich snippet displays in SERPs, but structured FAQ schema remains vital for machine comprehension. AEO uses schema as machine-readable training signals for AI Overviews and answer extraction algorithms.',
+  },
+  {
+    question: 'What is an answer-first content hierarchy?',
+    answer: 'An answer-first content hierarchy places a direct, self-contained summary of 40 to 60 words immediately beneath each question heading, followed by structured expansion such as bullet points, numbered steps, or data tables.',
+  },
+  {
+    question: 'Can AEO help with voice search queries?',
+    answer: 'Yes. Voice assistants such as Siri, Google Assistant, and Alexa pull their spoken responses directly from featured snippets and top-ranking direct answers optimized using AEO principles.',
+  },
+  {
+    question: 'How do you measure AEO success?',
+    answer: 'We measure AEO through featured snippet wins, People Also Ask footprint expansions, brand citations inside Google AI Overviews, and zero-click brand impressions tracked via Google Search Console.',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/services/aeo',
+    breadcrumbs,
+    service: {
+      name: 'Answer Engine Optimization (AEO) Services',
+      serviceType: 'Answer Engine Optimization',
+      description: pageDescription,
+      url: 'https://TODO_DOMAIN/services/aeo',
+      audienceType: 'Brands seeking featured snippet and AI Overview capture',
+    },
+    faqs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="section section--ink">
+    <div class="container hero">
+      <span class="label-mono label-mono--cyan">DIRECT ANSWER &amp; AI OVERVIEWS</span>
+      <h1 class="hero__title">
+        Answer engine optimization (AEO) for <mark class="hl">zero-click search</mark>
+      </h1>
+      <p class="hero__direct-answer">
+        Answer Engine Optimization (AEO) ensures your brand is the direct answer search engines display to users. We structure your copy, implement semantic question-and-answer schema, and format your website so Google AI Overviews, featured snippets, and voice assistants extract and quote your business.
+      </p>
+      <div class="hero__actions">
+        <Button href="/free-audit" variant="primary">
+          Get your free AEO audit <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href="/blog/what-is-aeo" variant="outline-on-dark">
+          Read our AEO guide
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It Is For -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">TARGET AUDIENCE</span>
+        <h2>Who needs Answer Engine Optimization?</h2>
+        <p>AEO is essential for businesses competing in query spaces dominated by AI summaries and snippet boxes.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="info-card">
+          <Icon name="search" size={28} />
+          <h3>High-Intent Service Providers</h3>
+          <p>
+            Agencies, legal, financial, and healthcare practices where potential clients query specific questions prior to booking consultations.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <Icon name="sparkles" size={28} />
+          <h3>D2C &amp; E-commerce Brands</h3>
+          <p>
+            Brands competing for category definitions, product comparison queries, and "how-to" intent searches that trigger Google AI Overviews.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <Icon name="globe" size={28} />
+          <h3>B2B &amp; SaaS Companies</h3>
+          <p>
+            Software platforms looking to win the narrative for terminology definitions, software category comparisons, and buyer FAQs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Included -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">AEO DELIVERABLES</span>
+        <h2>What our AEO services deliver</h2>
+        <p>A systematic overhaul of how your content is parsed, structured, and presented to machines.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="sparkles" size={24} />
+            <h3>1. Answer-First Modular Restructuring</h3>
+          </div>
+          <p>
+            We rewrite critical landing page copy to deliver precise answers in the first 40–60 words under each heading, eliminating fluff that confuses AI extraction algorithms.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="code" size={24} />
+            <h3>2. Structured Question &amp; Answer Schema</h3>
+          </div>
+          <p>
+            We implement comprehensive JSON-LD schemas matching visible content word-for-word, giving search engine parsers clean machine-readable data feeds.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="search" size={24} />
+            <h3>3. People Also Ask (PAA) Expansion</h3>
+          </div>
+          <p>
+            We map the entire cluster of secondary questions surrounding your core topics and engineer high-density FAQ modules that systematically capture snippet carousels.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="chart" size={24} />
+            <h3>4. Semantic Table &amp; List Formatting</h3>
+          </div>
+          <p>
+            We reformat dense comparative paragraphs into semantic HTML tables (<code>&lt;table&gt;</code>) and sequential ordered lists (<code>&lt;ol&gt;</code>) that Google algorithms prioritize for snippet extraction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">METHODOLOGY</span>
+        <h2>Our 4-step AEO execution process</h2>
+      </div>
+
+      <div class="process-list">
+        <div class="process-item">
+          <span class="process-item__num">01</span>
+          <div>
+            <h3>Query Intent &amp; Snippet Audit</h3>
+            <p>We analyze current featured snippet and AI Overview triggers across your target keyword universe to identify extraction candidates.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">02</span>
+          <div>
+            <h3>Answer Architecture Blueprint</h3>
+            <p>We draft modular, direct-answer definitions and create scannable data layouts optimized for natural language processing models.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">03</span>
+          <div>
+            <h3>Code &amp; Schema Implementation</h3>
+            <p>We publish the restructured content and embed valid schema graphs without introducing render-blocking JavaScript.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">04</span>
+          <div>
+            <h3>Snippet Capture Monitoring</h3>
+            <p>We track snippet volatility, measure Google AI Overview mentions, and refine answer wording to protect winning positions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results We Measure -->
+  <section class="section section--ink">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono label-mono--cyan">AEO METRICS</span>
+        <h2>What we measure and optimize</h2>
+        <p>Zero-click visibility metrics tailored for the modern search landscape.</p>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="metric-card">
+          <span class="metric-card__title">Featured Snippet Share</span>
+          <p>Percentage of targeted question queries triggering your site as the primary featured snippet.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">Google AI Overviews</span>
+          <p>Frequency of your domain appearing as a source link inside synthesized Google search overviews.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">PAA Box Ownership</span>
+          <p>Number of secondary question modules capturing your brand’s structured answer copy.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">Zero-Click Impression Reach</span>
+          <p>Expanded total brand impressions earned across conversational SERP features in Search Console.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Links -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">NEXT STEPS</span>
+        <h2>Related services and guides</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <Card
+          title="Generative Engine Optimization (GEO)"
+          href="/services/geo"
+          tag="GEO"
+          tagVariant="geo"
+          description="Take answer optimization further with AI model citations across ChatGPT and Perplexity."
+        />
+        <Card
+          title="Search Engine Optimization (SEO)"
+          href="/services/seo"
+          tag="SEO"
+          tagVariant="seo"
+          description="Build the core technical and keyword foundation needed for long-term organic growth."
+        />
+        <Card
+          title="What is Answer Engine Optimization?"
+          href="/blog/what-is-aeo"
+          tag="GUIDE"
+          tagVariant="neutral"
+          description="Read our comprehensive breakdown of how modern search engines extract direct answers."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <Faq items={faqs} title="Frequently asked questions about AEO" />
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <Cta
+    headline="Is your brand losing out to Google AI Overviews and snippets?"
+    subhead="Request your free AEO audit. We’ll analyze your high-intent queries and identify immediate snippet capture opportunities."
+    buttonText="Claim your free AEO audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .hero { max-width: 54rem; }
+  .label-mono--cyan { color: var(--cyan); }
+  .hero__title { margin-block: var(--space-3) var(--space-4); }
+  .hero__direct-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .section-header { margin-bottom: var(--space-7); max-width: 48rem; }
+  .section-header h2 { margin-block: var(--space-2) var(--space-2); }
+  .section-header p { font-size: 1.125rem; color: var(--text-muted); }
+  .section--ink .section-header p { color: color-mix(in srgb, var(--paper) 75%, transparent); }
+  .grid { display: grid; gap: var(--space-5); }
+  .grid--2 { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+  .grid--3 { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .grid--4 { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+  .info-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .info-card h3 { margin: 0; font-size: 1.25rem; }
+  .info-card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .deliverable-box {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+  .deliverable-box__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+  .deliverable-box__header h3 { font-size: 1.25rem; margin: 0; }
+  .deliverable-box p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .process-list { display: flex; flex-direction: column; gap: var(--space-5); }
+  .process-item { display: flex; gap: var(--space-5); padding-bottom: var(--space-5); border-bottom: var(--border); }
+  .process-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .process-item__num {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .process-item h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .process-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .metric-card {
+    background-color: #171719;
+    border: var(--border-dark);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+  }
+  .metric-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cyan);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+  .metric-card p {
+    color: color-mix(in srgb, var(--paper) 75%, transparent);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+</style>

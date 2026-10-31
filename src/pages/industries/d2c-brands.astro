@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Icon from '../../components/ui/Icon.astro';
+import Card from '../../components/ui/Card.astro';
+import Faq from '../../components/ui/Faq.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+const pageTitle = 'SEO and AI Search for D2C Brands | Findable';
+const pageDescription = 'Acquire high-value customers without spiraling ad spend. SEO, AEO, and Generative Engine Optimization designed specifically for direct-to-consumer (D2C) brands.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Industries', url: 'https://TODO_DOMAIN/industries/local-businesses' },
+  { name: 'D2C Brands', url: 'https://TODO_DOMAIN/industries/d2c-brands' },
+];
+
+const faqs = [
+  {
+    question: 'Why is SEO critical for D2C brands facing high customer acquisition costs (CAC)?',
+    answer: 'Rising Meta and Google ad costs erode D2C margins. Organic search and AI engine recommendations provide compounding, zero-marginal-cost customer acquisition that reduces brand reliance on paid ad auctions.',
+  },
+  {
+    question: 'How do you get our D2C products cited by ChatGPT and Perplexity?',
+    answer: 'We establish product entity authority by embedding Product schema, securing authoritative third-party editorial reviews, structuring comparison tables, and publishing proprietary ingredient or design teardowns that AI retrieval models cite during shopping queries.',
+  },
+  {
+    question: 'How do you structure content for D2C buying intent?',
+    answer: 'We create category-defining answer hubs, comparison guides ("Brand A vs Brand B"), and problem-solution landing pages that capture customers during their active consideration and decision stages.',
+  },
+  {
+    question: 'Can you optimize headless Shopify or custom D2C stores?',
+    answer: 'Yes. We specialize in optimizing custom Shopify builds, headless storefronts, and static frameworks. We eliminate slow third-party app scripts, fix Shopify collection duplicate URLs, and implement automated product JSON-LD schemas.',
+  },
+  {
+    question: 'How quickly does D2C organic revenue scale?',
+    answer: 'High-intent comparison and category pages begin capturing commercial clicks within 60 to 90 days. A full topical authority engine typically matures into a primary revenue driver over 6 to 12 months.',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/industries/d2c-brands',
+    breadcrumbs,
+    service: {
+      name: 'SEO and AI Search for D2C Brands',
+      serviceType: 'D2C SEO',
+      description: pageDescription,
+      url: 'https://TODO_DOMAIN/industries/d2c-brands',
+      audienceType: 'Direct-to-consumer (D2C) e-commerce brands',
+    },
+    faqs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="section section--ink">
+    <div class="container hero">
+      <span class="label-mono label-mono--orange">ORGANIC ACQUISITION FOR D2C</span>
+      <h1 class="hero__title">
+        Scale D2C revenue without <mark class="hl">burning budget on paid ads</mark>
+      </h1>
+      <p class="hero__direct-answer">
+        Findable helps direct-to-consumer (D2C) brands win compounding customer acquisition through organic search and AI engine citations. We eliminate technical store slowdowns, build high-intent comparison content, and ensure your products are recommended when shoppers ask ChatGPT, Perplexity, and Google AI Overviews for buying guidance.
+      </p>
+      <div class="hero__actions">
+        <Button href="/free-audit" variant="primary">
+          Get your free D2C audit <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href="/contact" variant="outline-on-dark">
+          Schedule a strategy call
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- D2C Specific Problems -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">THE D2C DILEMMA</span>
+        <h2>Why paid ads alone are no longer sustainable</h2>
+        <p>Three headwinds challenge direct-to-consumer margins today:</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="problem-box">
+          <span class="problem-box__num">01</span>
+          <h3>Escalating Paid Ad CAC</h3>
+          <p>Ad auction fatigue and privacy tracking limits make customer acquisition via paid social increasingly volatile and unprofitable.</p>
+        </div>
+        <div class="problem-box">
+          <span class="problem-box__num">02</span>
+          <h3>Shopify Theme &amp; App Lag</h3>
+          <p>Stores weighed down by review widgets, popup scripts, and analytics tags fail Core Web Vitals, triggering search ranking penalties.</p>
+        </div>
+        <div class="problem-box">
+          <span class="problem-box__num">03</span>
+          <h3>Zero Visibility in AI Search</h3>
+          <p>Shoppers increasingly ask conversational AI for product comparisons. Without generative engine optimization, your competitors get recommended.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Mapped to SEO, AEO, GEO -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">THE TRIPLE-THREAT FORMULA</span>
+        <h2>How SEO, AEO, and GEO accelerate D2C growth</h2>
+        <p>An integrated search engine and answer engine ecosystem built for consumer brands.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <Card
+          title="D2C Technical SEO"
+          tag="SEO"
+          tagVariant="seo"
+          description="Fix collection page canonical traps, eliminate render-blocking store apps, and build clean facet indexing architectures."
+        />
+        <Card
+          title="Comparison &amp; Buying AEO"
+          tag="AEO"
+          tagVariant="aeo"
+          description="Capture Google AI Overviews and featured snippets for 'best [category]' and '[product] vs [alternative]' queries."
+        />
+        <Card
+          title="AI Citation Engine (GEO)"
+          tag="GEO"
+          tagVariant="geo"
+          description="Embed connected Product and Review schema graphs and establish brand consensus so ChatGPT and Perplexity recommend your store."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Execution Plan -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">D2C ROADMAP</span>
+        <h2>Our 90-day organic growth blueprint for D2C</h2>
+      </div>
+
+      <div class="plan-steps">
+        <div class="plan-step">
+          <span class="plan-step__day">Month 1</span>
+          <div class="plan-step__content">
+            <h3>Technical Clean-Up &amp; Store Speed Overhaul</h3>
+            <p>Audit JavaScript bloat, optimize collection canonicalization, implement Product and Organization schema, and open AI crawler access.</p>
+          </div>
+        </div>
+        <div class="plan-step">
+          <span class="plan-step__day">Month 2</span>
+          <div class="plan-step__content">
+            <h3>High-Intent Comparison &amp; Category Hubs</h3>
+            <p>Publish answer-first comparison matrices, product use-case teardowns, and ingredient/material authority pages.</p>
+          </div>
+        </div>
+        <div class="plan-step">
+          <span class="plan-step__day">Month 3</span>
+          <div class="plan-step__content">
+            <h3>AI Search Citations &amp; Authority Amplification</h3>
+            <p>Harmonize third-party review platforms, secure authoritative editorial citations, and test benchmark prompts in ChatGPT and Perplexity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <Faq items={faqs} title="Frequently asked questions about D2C SEO" />
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <Cta
+    headline="Ready to turn search and AI into your top D2C acquisition channels?"
+    subhead="Request your free D2C audit today. We’ll analyze your store speed, collection architecture, and AI engine citation footprint."
+    buttonText="Claim your free D2C audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .hero { max-width: 54rem; }
+  .label-mono--orange { color: var(--orange); }
+  .hero__title { margin-block: var(--space-3) var(--space-4); }
+  .hero__direct-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .section-header { margin-bottom: var(--space-7); max-width: 48rem; }
+  .section-header h2 { margin-block: var(--space-2) var(--space-2); }
+  .section-header p { font-size: 1.125rem; color: var(--text-muted); }
+  .grid { display: grid; gap: var(--space-5); }
+  .grid--3 { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .problem-box {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+  .problem-box__num {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--orange);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+  .problem-box h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .problem-box p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .plan-steps { display: flex; flex-direction: column; gap: var(--space-5); }
+  .plan-step { display: flex; gap: var(--space-5); padding-bottom: var(--space-5); border-bottom: var(--border); }
+  .plan-step:last-child { border-bottom: none; padding-bottom: 0; }
+  .plan-step__day {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--lime);
+    background-color: var(--ink);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    height: fit-content;
+    white-space: nowrap;
+  }
+  .plan-step__content h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .plan-step__content p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+</style>
+

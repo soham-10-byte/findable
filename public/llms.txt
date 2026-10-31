@@ -1,0 +1,21 @@
+# Findable
+
+Findable is an SEO, AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization) agency helping local, D2C, and e-commerce brands get found on Google, cited by AI engines, and chosen by customers.
+
+## Key Pages
+
+- https://TODO_DOMAIN/: Homepage - agency overview, core services, proof, and free audit request.
+- https://TODO_DOMAIN/services: Overview of all services (SEO, AEO, GEO, and SEO-friendly Web Development).
+- https://TODO_DOMAIN/services/seo: Search Engine Optimization for local, D2C, and e-commerce brands.
+- https://TODO_DOMAIN/services/aeo: Answer Engine Optimization for featured snippets, People Also Ask, and Google AI Overviews.
+- https://TODO_DOMAIN/services/geo: Generative Engine Optimization for AI citations across ChatGPT, Perplexity, Claude, and Gemini.
+- https://TODO_DOMAIN/services/website-development: SEO-first, ultra-fast static web development meeting Core Web Vitals.
+- https://TODO_DOMAIN/industries/local-businesses: Local SEO, Google Business Profile, and local pack ranking.
+- https://TODO_DOMAIN/industries/d2c-brands: Organic search and AI search visibility for direct-to-consumer brands.
+- https://TODO_DOMAIN/industries/ecommerce-brands: E-commerce SEO for category, collection, and product pages.
+- https://TODO_DOMAIN/free-audit: Free comprehensive SEO, AEO, and GEO technical audit.
+- https://TODO_DOMAIN/case-studies: Documented proof and results from search and AI optimization campaigns.
+- https://TODO_DOMAIN/blog: Guides and technical teardowns on SEO, AEO, and GEO.
+- https://TODO_DOMAIN/about: Company mission, founder information, and entity credentials.
+- https://TODO_DOMAIN/contact: Direct contact form, consultation requests, and service details.
+

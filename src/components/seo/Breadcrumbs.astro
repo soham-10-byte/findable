@@ -1,0 +1,76 @@
+---
+import type { BreadcrumbItem } from '../../lib/schema';
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <div class="container">
+    <ol class="breadcrumbs__list">
+      {items.map((item, index) => {
+        const isLast = index === items.length - 1;
+        return (
+          <li class="breadcrumbs__item">
+            {isLast ? (
+              <span aria-current="page" class="breadcrumbs__current">{item.name}</span>
+            ) : (
+              <>
+                <a href={item.url} class="breadcrumbs__link">{item.name}</a>
+                <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+              </>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</nav>
+
+<style>
+  .breadcrumbs {
+    padding-block: var(--space-3);
+    font-size: 0.875rem;
+    font-family: var(--font-mono);
+  }
+
+  .breadcrumbs__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumbs__item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .breadcrumbs__link {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumbs__link:hover {
+    color: var(--link);
+    text-decoration: underline;
+  }
+
+  .breadcrumbs__separator {
+    color: var(--text-muted);
+    opacity: 0.5;
+  }
+
+  .breadcrumbs__current {
+    color: var(--text);
+    font-weight: 500;
+  }
+</style>
+

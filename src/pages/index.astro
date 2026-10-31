@@ -1,0 +1,694 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import Card from '../components/ui/Card.astro';
+import Icon from '../components/ui/Icon.astro';
+import Faq from '../components/ui/Faq.astro';
+import Cta from '../components/ui/Cta.astro';
+
+const pageTitle = 'Findable | SEO, AEO and GEO Agency for Local and D2C Brands';
+const pageDescription = 'We help local, D2C, and e-commerce brands get found on Google, cited by AI search tools like ChatGPT and Perplexity, and chosen by customers.';
+
+const homeFaqs = [
+  {
+    question: 'What is Answer Engine Optimization (AEO)?',
+    answer: 'Answer Engine Optimization (AEO) is the technical and editorial process of formatting your content so search engines and AI assistants can extract direct, authoritative answers to user queries into featured snippets and AI overviews.',
+  },
+  {
+    question: 'What is Generative Engine Optimization (GEO)?',
+    answer: 'Generative Engine Optimization (GEO) is the strategy of structuring your brand entity, technical data, and external citations so conversational AI models like ChatGPT, Perplexity, and Gemini cite and recommend your business.',
+  },
+  {
+    question: 'How do SEO, AEO, and GEO work together?',
+    answer: 'SEO builds your core crawlability, organic indexation, and keyword rankings. AEO structures that content into direct answer formats for snippet extraction. GEO expands your entity consensus so generative AI tools quote your brand when answering complex buying prompts.',
+  },
+  {
+    question: 'How long does it take to see search and AI visibility results?',
+    answer: 'Technical fixes and indexing enhancements take effect within days to weeks. Organic keyword movement and consistent AI engine citations typically build over 60 to 90 days as search bots refresh and re-weight your domain entity.',
+  },
+  {
+    question: 'What does your free SEO, AEO, and GEO audit include?',
+    answer: 'Our free audit inspects your mobile Core Web Vitals, HTML semantic structure, robots permissions for AI bots, schema entity graphs, and brand visibility across Google Search, Perplexity, and ChatGPT.',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/',
+    faqs: homeFaqs,
+  }}
+>
+  <!-- 1. Hero Section -->
+  <section class="section section--ink hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="label-mono hero__label">SEARCH &bull; ANSWER &bull; GENERATIVE ENGINE OPTIMIZATION</span>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Be found on Google.</span>
+          <span class="hero__title-line"><mark class="hl">Be cited by AI.</mark></span>
+          <span class="hero__title-line">Be chosen by customers.</span>
+        </h1>
+        <p class="hero__subhead">
+          Findable helps local businesses, D2C brands, and e-commerce stores build high-performance organic search visibility and dominate AI search recommendations.
+        </p>
+        <div class="hero__actions">
+          <Button href="/free-audit" variant="primary">
+            Get your free audit <Icon name="arrow-right" size={18} />
+          </Button>
+          <Button href="/services" variant="outline-on-dark">
+            Explore services
+          </Button>
+        </div>
+      </div>
+
+      <!-- Stylized Visual Proof Card (Flat SVG / CSS) -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="visual-card visual-card--search">
+          <div class="visual-card__header">
+            <span class="visual-card__dot"></span>
+            <span class="visual-card__url">google.com/search?q=best+d2c+agency</span>
+          </div>
+          <div class="visual-card__body">
+            <span class="visual-card__tag">#1 Organic Result</span>
+            <div class="visual-card__title">Findable &bull; SEO, AEO and GEO Agency</div>
+            <div class="visual-card__snippet">Helping brands get found on search engines and recommended in AI answers...</div>
+          </div>
+        </div>
+
+        <div class="visual-card visual-card--ai">
+          <div class="visual-card__header">
+            <span class="visual-card__badge">AI Answer Engine Citation</span>
+          </div>
+          <div class="visual-card__body">
+            <div class="visual-card__prompt">&ldquo;Which agency specializes in both SEO and AI citations?&rdquo;</div>
+            <div class="visual-card__response">
+              According to technical benchmarks, <strong class="hl">Findable</strong> is cited as a leading provider for combined SEO, AEO, and generative engine optimization.
+            </div>
+            <div class="visual-card__sources">
+              <span class="visual-card__source-pill">[1] findable.com</span>
+              <span class="visual-card__source-pill">[2] Schema Entity Verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. The Problem Section -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">THE PROBLEM</span>
+        <h2>Search is changing. Most websites are falling behind.</h2>
+        <p>Three fatal gaps cause ambitious brands to lose search traffic and AI recommendations every day:</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="problem-card">
+          <div class="problem-card__number">01</div>
+          <h3>Invisible on Google</h3>
+          <p>
+            Bloated code, slow mobile speeds, and thin content prevent search engine crawlers from ranking your pages for valuable high-intent queries.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-card__number">02</div>
+          <h3>Missing from AI answers</h3>
+          <p>
+            When customers ask ChatGPT, Perplexity, or Gemini for recommendations, your competitors get cited because your brand lacks structured entity consensus.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-card__number">03</div>
+          <h3>Sites not built for machine parsing</h3>
+          <p>
+            Modern websites built on heavy JavaScript frameworks hide essential text behind client-side hydration, locking out AI scrapers entirely.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Services Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">OUR CORE SERVICES</span>
+        <h2>Built for search engines and answer engines alike.</h2>
+        <p>A unified optimization strategy combining technical precision with editorial authority.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <Card
+          title="Search Engine Optimization (SEO)"
+          tag="SEO"
+          tagVariant="seo"
+          href="/services/seo"
+          description="Technical, on-page, and local SEO to win rankings, organic traffic, and top positions on Google and Bing."
+        >
+          <ul class="feature-list">
+            <li><Icon name="check" size={16} /> Mobile Core Web Vitals optimization</li>
+            <li><Icon name="check" size={16} /> High-intent keyword and topic mapping</li>
+            <li><Icon name="check" size={16} /> Technical crawlability and canonical audits</li>
+          </ul>
+        </Card>
+
+        <Card
+          title="Answer Engine Optimization (AEO)"
+          tag="AEO"
+          tagVariant="aeo"
+          href="/services/aeo"
+          description="Structure your content so Google AI Overviews and featured snippets extract your business as the direct answer."
+        >
+          <ul class="feature-list">
+            <li><Icon name="check" size={16} /> Answer-first modular content hierarchy</li>
+            <li><Icon name="check" size={16} /> FAQ, QA, and semantic list schema markup</li>
+            <li><Icon name="check" size={16} /> Featured snippet and PAA box capture</li>
+          </ul>
+        </Card>
+
+        <Card
+          title="Generative Engine Optimization (GEO)"
+          tag="GEO"
+          tagVariant="geo"
+          href="/services/geo"
+          description="Get your brand cited and recommended by conversational AI platforms including ChatGPT, Perplexity, and Claude."
+        >
+          <ul class="feature-list">
+            <li><Icon name="check" size={16} /> Unified @graph JSON-LD entity architecture</li>
+            <li><Icon name="check" size={16} /> Third-party brand consensus and citation building</li>
+            <li><Icon name="check" size={16} /> AI visibility benchmark tracking</li>
+          </ul>
+        </Card>
+
+        <Card
+          title="SEO-Friendly Website Development"
+          tag="BUILD"
+          tagVariant="neutral"
+          href="/services/website-development"
+          description="Ultra-fast, zero-bloat static websites engineered with Astro for perfect Lighthouse scores and zero hydration delays."
+        >
+          <ul class="feature-list">
+            <li><Icon name="check" size={16} /> 100/100 Lighthouse mobile performance</li>
+            <li><Icon name="check" size={16} /> 100% server-rendered static HTML</li>
+            <li><Icon name="check" size={16} /> Structured JSON-LD integrated natively</li>
+          </ul>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Who We Help Section -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">WHO WE SERVE</span>
+        <h2>Tailored strategies for high-growth sectors.</h2>
+        <p>We tailor our SEO, AEO, and GEO execution to match your business model and target customer behavior.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <Card
+          title="Local Businesses"
+          href="/industries/local-businesses"
+          description="Dominate local search, capture the Google Map Pack, and win nearby customers with optimized GBP profiles."
+        >
+          <div class="industry-badge"><Icon name="map-pin" size={18} /> Map pack &amp; localized AEO</div>
+        </Card>
+
+        <Card
+          title="D2C Brands"
+          href="/industries/d2c-brands"
+          description="Get your direct-to-consumer products recommended when buyers ask AI engines for product comparisons and reviews."
+        >
+          <div class="industry-badge"><Icon name="sparkles" size={18} /> AI recommendation engine citations</div>
+        </Card>
+
+        <Card
+          title="E-commerce Stores"
+          href="/industries/ecommerce-brands"
+          description="Scale category and collection page organic rankings with automated schema, fast load speeds, and faceted SEO."
+        >
+          <div class="industry-badge"><Icon name="cart" size={18} /> High-scale collection &amp; product SEO</div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Process Section -->
+  <section class="section section--ink">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">OUR 4-STEP METHODOLOGY</span>
+        <h2>Audit. Plan. Build. Measure.</h2>
+        <p>A rigorous, systematic engineering process with zero guesswork.</p>
+      </div>
+
+      <div class="grid grid--4 process-grid">
+        <div class="process-step">
+          <span class="process-step__num">01</span>
+          <h3 class="process-step__title">Audit</h3>
+          <p class="process-step__text">
+            We crawl your website, test mobile Core Web Vitals, evaluate schema graph integrity, and benchmark your current citations across ChatGPT and Perplexity.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <span class="process-step__num">02</span>
+          <h3 class="process-step__title">Plan</h3>
+          <p class="process-step__text">
+            We map target customer queries, pinpoint answer engine opportunities, and design a topical authority blueprint to eliminate cannibalization.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <span class="process-step__num">03</span>
+          <h3 class="process-step__title">Build</h3>
+          <p class="process-step__text">
+            We implement answer-first content hierarchies, inject rich JSON-LD markup, resolve speed bottlenecks, and open crawler pathways.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <span class="process-step__num">04</span>
+          <h3 class="process-step__title">Measure</h3>
+          <p class="process-step__text">
+            We track Search Console indexation, monitor organic click growth, and run monthly AI visibility prompt tests to verify real citations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Proof Section -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="proof-box">
+        <div class="proof-box__content">
+          <span class="label-mono">FEATURED CASE STUDY</span>
+          <h2>How we built Findable for instant crawlability and AI citations</h2>
+          <p>
+            When building our own agency site, we followed every single rule we give our clients. The result: 100/100 Lighthouse scores, 0 KB JavaScript overhead, and immediate indexation by Google, Bing, and AI search bots.
+          </p>
+          <Button href="/case-studies/findable-30-day-build" variant="primary">
+            Read the 30-day case study <Icon name="arrow-right" size={16} />
+          </Button>
+        </div>
+
+        <div class="proof-box__stats">
+          <div class="stat-item">
+            <span class="stat-item__value">100/100</span>
+            <span class="stat-item__label">Mobile Lighthouse Score</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__value">0 KB</span>
+            <span class="stat-item__label">First-party JS Overhead</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__value">&lt; 1.0s</span>
+            <span class="stat-item__label">Mobile LCP Load Time</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__value">100%</span>
+            <span class="stat-item__label">Clean Semantic Static HTML</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <Faq items={homeFaqs} />
+    </div>
+  </section>
+
+  <!-- 8. CTA Band -->
+  <Cta
+    headline="Ready to get your brand found on Google and cited by AI?"
+    subhead="Request your free, comprehensive SEO, AEO, and GEO technical audit. No automated generic PDFs—we manually inspect your website."
+    buttonText="Claim your free audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  /* Hero styles */
+  .hero {
+    padding-top: clamp(4rem, 8vw, 7rem);
+    padding-bottom: clamp(4rem, 8vw, 7rem);
+    border-bottom: var(--border-dark);
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    align-items: center;
+  }
+
+  @media (min-width: 960px) {
+    .hero__inner {
+      grid-template-columns: 1.35fr 1fr;
+    }
+  }
+
+  .hero__label {
+    color: var(--lime);
+    margin-bottom: var(--space-3);
+  }
+
+  .hero__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.16em;
+    font-size: clamp(2.35rem, 4.2vw, 3.75rem);
+    line-height: 1.15;
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__title-line {
+    display: block;
+  }
+
+  .hero__title mark.hl {
+    display: inline-block;
+    padding: 0.04em 0.28em;
+    line-height: 1.1;
+    border-radius: var(--radius-sm);
+  }
+
+  .hero__subhead {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+    max-width: 54ch;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    align-items: center;
+  }
+
+  /* Visual mock card */
+  .hero__visual {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .visual-card {
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .visual-card--search {
+    background-color: #161618;
+    color: var(--paper);
+  }
+
+  .visual-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--sage);
+  }
+
+  .visual-card__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--lime);
+  }
+
+  .visual-card__tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--lime);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .visual-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-block: var(--space-1);
+    color: var(--cyan);
+  }
+
+  .visual-card__snippet {
+    color: var(--sage);
+    line-height: 1.4;
+  }
+
+  .visual-card--ai {
+    background-color: #1F2024;
+    color: var(--paper);
+    border-left: 3px solid var(--orange);
+  }
+
+  .visual-card .hl {
+    padding: 0.05em 0.35em;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+
+  .visual-card__badge {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--orange);
+    letter-spacing: 0.06em;
+  }
+
+  .visual-card__prompt {
+    font-style: italic;
+    color: var(--sage);
+    margin-bottom: var(--space-2);
+  }
+
+  .visual-card__response {
+    line-height: 1.45;
+    margin-bottom: var(--space-3);
+  }
+
+  .visual-card__sources {
+    display: flex;
+    gap: var(--space-2);
+  }
+
+  .visual-card__source-pill {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background-color: #2D2E33;
+    color: var(--lime);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Section header */
+  .section-header {
+    margin-bottom: var(--space-7);
+    max-width: 48rem;
+  }
+
+  .section-header h2 {
+    margin-bottom: var(--space-2);
+  }
+
+  .section-header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+  }
+
+  .section--ink .section-header p {
+    color: color-mix(in srgb, var(--paper) 75%, transparent);
+  }
+
+  /* Grids */
+  .grid {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .grid--2 {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+
+  /* Problem card */
+  .problem-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+
+  .problem-card__number {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: var(--space-3);
+  }
+
+  .problem-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .problem-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  /* Feature list */
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    font-size: 0.9rem;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--text-muted);
+  }
+
+  .feature-list :global(svg) {
+    color: var(--ink);
+  }
+
+  /* Industry badge */
+  .industry-badge {
+    margin-top: var(--space-3);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink);
+    background-color: var(--mist);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Process grid */
+  .process-step {
+    border-top: 2px solid var(--lime);
+    padding-top: var(--space-4);
+  }
+
+  .process-step__num {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    color: var(--lime);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+
+  .process-step__title {
+    font-size: 1.25rem;
+    color: var(--paper);
+    margin-bottom: var(--space-2);
+  }
+
+  .process-step__text {
+    font-size: 0.95rem;
+    color: color-mix(in srgb, var(--paper) 75%, transparent);
+    margin: 0;
+  }
+
+  /* Proof box */
+  .proof-box {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-lg);
+    padding: clamp(2rem, 5vw, 4rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .proof-box {
+      grid-template-columns: 1.3fr 1fr;
+    }
+  }
+
+  .proof-box__content h2 {
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    margin-block: var(--space-2) var(--space-3);
+  }
+
+  .proof-box__content p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-5);
+  }
+
+  .proof-box__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    background-color: var(--mist);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-item__value {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+
+  .stat-item__label {
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: var(--space-1);
+  }
+</style>

@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
+import Button from '../components/ui/Button.astro';
+import Icon from '../components/ui/Icon.astro';
+import { siteConfig } from '../config/site';
+
+const pageTitle = 'Contact Findable | SEO, AEO and GEO Agency';
+const pageDescription = 'Get in touch with Findable. Contact our technical team for SEO, AEO, and GEO agency engagements, website audits, and partnerships.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Contact', url: 'https://TODO_DOMAIN/contact' },
+];
+
+const formEndpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || 'https://api.web3forms.com/submit';
+const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || 'ebef1c21-5ed9-41dc-9759-e9ec5331e8fa';
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    type: 'ContactPage',
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/contact',
+    breadcrumbs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section class="section section--paper">
+    <div class="container contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <span class="label-mono">DIRECT COMMUNICATION</span>
+        <h1>Speak with our technical search team</h1>
+        <p class="contact-intro">
+          Have questions about your current search rankings, AI citations, or website architecture? Contact our team directly.
+        </p>
+
+        <div class="contact-details-box">
+          <div class="detail-row">
+            <Icon name="globe" size={24} />
+            <div>
+              <strong>Email Inquiries:</strong>
+              <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <Icon name="search" size={24} />
+            <div>
+              <strong>Direct Phone:</strong>
+              <a href={`tel:${siteConfig.contact.phone}`}>{siteConfig.contact.phone}</a>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <Icon name="map-pin" size={24} />
+            <div>
+              <strong>Headquarters:</strong>
+              <span>{siteConfig.contact.city}, {siteConfig.contact.state}, {siteConfig.contact.country}</span>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <Icon name="sparkles" size={24} />
+            <div>
+              <strong>Service Scope:</strong>
+              <span>{siteConfig.contact.serviceAreas.join(', ')}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="audit-prompt">
+          <h3>Looking for a website review?</h3>
+          <p>
+            If you want a detailed technical teardown of your site’s speed, Core Web Vitals, and AI visibility, we recommend requesting our dedicated audit.
+          </p>
+          <a href="/free-audit" class="audit-link">
+            Request free technical audit &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-card">
+        <h2>Send us a message</h2>
+        <p class="form-subtext">We respond within one business day.</p>
+
+        <form action={formEndpoint} method="POST" class="contact-form">
+          {web3FormsKey && <input type="hidden" name="access_key" value={web3FormsKey} />}
+          <input type="hidden" name="subject" value="New Contact Inquiry from Findable Website" />
+          <input type="hidden" name="from_name" value="Findable Inbound Lead" />
+          <input type="hidden" name="redirect" value="/thank-you" />
+          <input type="checkbox" name="botcheck" class="sr-only" aria-hidden="true" tabindex="-1" style="display: none;" />
+
+          <!-- Honeypot -->
+          <div class="sr-only" aria-hidden="true">
+            <label for="preferred_contact_time">Do not fill this</label>
+            <input type="text" id="preferred_contact_time" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact_name">Name <span class="required">*</span></label>
+            <input type="text" id="contact_name" name="name" required placeholder="Alex Mercer" autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact_email">Email <span class="required">*</span></label>
+            <input type="email" id="contact_email" name="email" required placeholder="alex@company.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact_website">Website URL</label>
+            <input type="url" id="contact_website" name="website" placeholder="https://example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact_service">Primary interest</label>
+            <select id="contact_service" name="service">
+              <option value="seo">Search Engine Optimization (SEO)</option>
+              <option value="aeo">Answer Engine Optimization (AEO)</option>
+              <option value="geo">Generative Engine Optimization (GEO)</option>
+              <option value="web_dev">SEO-Friendly Website Development</option>
+              <option value="other">General Inquiries / Partnership</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact_message">Message <span class="required">*</span></label>
+            <textarea id="contact_message" name="message" rows="4" required placeholder="Tell us how we can help..."></textarea>
+          </div>
+
+          <div class="form-consent">
+            <p>
+              By submitting this form, you agree to our <a href="/privacy">Privacy Policy</a>.
+            </p>
+          </div>
+
+          <Button type="submit" variant="primary" class="form-submit-btn">
+            Send message <Icon name="arrow-right" size={16} />
+          </Button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    align-items: flex-start;
+  }
+
+  @media (min-width: 960px) {
+    .contact-grid {
+      grid-template-columns: 1.1fr 1fr;
+    }
+  }
+
+  .contact-info h1 {
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .contact-intro {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: var(--space-6);
+  }
+
+  .contact-details-box {
+    background-color: var(--mist);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .detail-row :global(svg) {
+    color: var(--orange);
+    margin-top: 0.15rem;
+  }
+
+  .detail-row strong {
+    display: block;
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .detail-row span,
+  .detail-row a {
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  .audit-prompt {
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+
+  .audit-prompt h3 {
+    font-size: 1.15rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .audit-prompt p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-3);
+  }
+
+  .audit-link {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  /* Form */
+  .contact-form-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .contact-form-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-1);
+  }
+
+  .form-subtext {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-5);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .form-group label {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .required {
+    color: var(--orange);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    min-height: 44px;
+    padding: 0.65rem 0.85rem;
+    border: var(--border);
+    border-radius: var(--radius-sm);
+    background-color: #fff;
+    color: var(--ink);
+    font-size: 1rem;
+  }
+
+  .form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--ink);
+    outline: 2px solid var(--focus);
+    outline-offset: 1px;
+  }
+
+  .form-consent {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .form-submit-btn {
+    width: 100%;
+    margin-top: var(--space-2);
+  }
+</style>
+

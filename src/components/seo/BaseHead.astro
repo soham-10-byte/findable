@@ -1,0 +1,92 @@
+---
+import { siteConfig } from '../../config/site';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+}
+
+const rawPath = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '');
+const cleanPath = rawPath === '' ? '/' : rawPath;
+
+const {
+  title,
+  description,
+  canonicalURL = new URL(cleanPath, Astro.site || siteConfig.url).href,
+  image = siteConfig.ogImage,
+  imageAlt = `${title} | Findable`,
+  type = 'website',
+  noindex = false,
+  publishedTime,
+  modifiedTime,
+} = Astro.props;
+
+const absoluteOgImage = new URL(image, Astro.site || siteConfig.url).href;
+const robotsContent = noindex
+  ? 'noindex, follow'
+  : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+
+const ga4Id = import.meta.env.PUBLIC_GA4_ID;
+const hasValidGa4 = ga4Id && !ga4Id.includes('TODO_');
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content={robotsContent} />
+<meta name="theme-color" content="#0B0B0C" />
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={siteConfig.name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={absoluteOgImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={imageAlt} />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={absoluteOgImage} />
+
+<!-- Article metadata if applicable -->
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
+{modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+
+<!-- Blog feed -->
+<link rel="alternate" type="application/rss+xml" title="Findable blog" href="/rss.xml" />
+
+<!-- Deferred non-blocking GA4 analytics -->
+{hasValidGa4 && (
+  <script is:inline define:vars={{ ga4Id }}>
+    window.addEventListener('load', function() {
+      const script = document.createElement('script');
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
+      script.async = true;
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', ga4Id);
+    });
+  </script>
+)}

@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Icon from '../../components/ui/Icon.astro';
+import Card from '../../components/ui/Card.astro';
+import Faq from '../../components/ui/Faq.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+const pageTitle = 'E-commerce SEO Services for Online Stores | Findable';
+const pageDescription = 'Scale organic search revenue for online stores. E-commerce SEO, collection page architecture, automated product schema, and AI search visibility.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Industries', url: 'https://TODO_DOMAIN/industries/local-businesses' },
+  { name: 'E-commerce Stores', url: 'https://TODO_DOMAIN/industries/ecommerce-brands' },
+];
+
+const faqs = [
+  {
+    question: 'How do you handle faceted navigation and filter duplicate URLs?',
+    answer: 'We implement strict canonical tag rules, configure robots.txt parameter exclusions, and selectively index high-search-volume filter combinations (e.g., brand + category) while preventing crawl budget waste on multi-attribute variations.',
+  },
+  {
+    question: 'What structured data schema is essential for online stores?',
+    answer: 'Every product page requires complete schema.org Product and Offer markup, including pricing, availability, SKU, high-resolution image URLs, brand relationships, and verified customer review aggregates.',
+  },
+  {
+    question: 'How do you optimize large e-commerce catalog crawl budgets?',
+    answer: 'We eliminate crawl traps, streamline internal linking via parent-child category breadcrumbs, remove discontinued products with clean 301 redirects, and maintain dynamic, segmented XML sitemaps for fast search bot discovery.',
+  },
+  {
+    question: 'How does AEO and GEO impact e-commerce buying behavior?',
+    answer: 'Consumers increasingly ask AI assistants questions like "What are the best wireless noise-canceling headphones under $200?". By formatting product specs and buyer FAQs modularly, your products are extracted and cited directly in those answers.',
+  },
+  {
+    question: 'Can you work with Shopify, WooCommerce, Magento, or custom stacks?',
+    answer: 'Yes. We optimize stores built on Shopify, WooCommerce, Magento (Adobe Commerce), BigCommerce, and custom headless static architectures, eliminating platform-specific SEO bottlenecks without disrupting existing checkout flows.',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/industries/ecommerce-brands',
+    breadcrumbs,
+    service: {
+      name: 'E-commerce SEO Services for Online Stores',
+      serviceType: 'E-commerce SEO',
+      description: pageDescription,
+      url: 'https://TODO_DOMAIN/industries/ecommerce-brands',
+      audienceType: 'E-commerce stores and multi-category online retailers',
+    },
+    faqs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="section section--ink">
+    <div class="container hero">
+      <span class="label-mono label-mono--lime">SCALE PRODUCT &amp; CATEGORY TRAFFIC</span>
+      <h1 class="hero__title">
+        E-commerce SEO for <mark class="hl">scalable organic revenue</mark>
+      </h1>
+      <p class="hero__direct-answer">
+        E-commerce SEO from Findable scales high-margin organic sales for online retailers. We fix technical crawl budget waste, optimize faceted collection structures, automate rich product snippet schemas, and ensure your catalog is cited by AI shopping assistants and Google AI Overviews.
+      </p>
+      <div class="hero__actions">
+        <Button href="/free-audit" variant="primary">
+          Get your free e-commerce audit <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href="/contact" variant="outline-on-dark">
+          Discuss your store
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-commerce Specific Problems -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">CATALOG BOTTLENECKS</span>
+        <h2>Why large e-commerce catalogs fail to rank</h2>
+        <p>Three architectural flaws consistently prevent online stores from scaling search traffic:</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="problem-box">
+          <span class="problem-box__num">01</span>
+          <h3>Faceted Crawl Traps</h3>
+          <p>Unchecked filter combinations generate millions of duplicate URLs that consume crawl budget, preventing Googlebot from discovering high-value products.</p>
+        </div>
+        <div class="problem-box">
+          <span class="problem-box__num">02</span>
+          <h3>Thin Category Page Copy</h3>
+          <p>Product grids with zero editorial context fail to satisfy commercial intent or provide AI engines with the structured answers needed for recommendation.</p>
+        </div>
+        <div class="problem-box">
+          <span class="problem-box__num">03</span>
+          <h3>Broken Schema &amp; Price Feeds</h3>
+          <p>Outdated or non-compliant Product and Offer markup causes rich snippet stars, prices, and in-stock badges to disappear from Google SERPs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Mapped to SEO, AEO, GEO -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">THE E-COMMERCE ENGINE</span>
+        <h2>How we engineer e-commerce search dominance</h2>
+        <p>A systematic search, answer, and generative optimization framework for retail stores.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <Card
+          title="Faceted Architecture SEO"
+          tag="SEO"
+          tagVariant="seo"
+          description="Build clean canonical hierarchies, index high-demand attribute facets, and eliminate duplicate collection loops."
+        />
+        <Card
+          title="Product Buying Guide AEO"
+          tag="AEO"
+          tagVariant="aeo"
+          description="Deploy answer-first buyer guides, size charts, and comparison tables that capture featured snippets above commercial blue links."
+        />
+        <Card
+          title="AI Catalog Citations (GEO)"
+          tag="GEO"
+          tagVariant="geo"
+          description="Automate schema.org Product graphs with real-time merchant feeds so ChatGPT and Perplexity recommend your products during shopping prompts."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">RETAIL ROADMAP</span>
+        <h2>Our e-commerce optimization timeline</h2>
+      </div>
+
+      <div class="plan-steps">
+        <div class="plan-step">
+          <span class="plan-step__day">Phase 1</span>
+          <div class="plan-step__content">
+            <h3>Crawl Budget &amp; Technical Store Clean-Up</h3>
+            <p>Audit faceted URL indexing, resolve canonical redirect loops, implement XML product sitemaps, and fix Core Web Vitals on mobile PDPs.</p>
+          </div>
+        </div>
+        <div class="plan-step">
+          <span class="plan-step__day">Phase 2</span>
+          <div class="plan-step__content">
+            <h3>Collection Page &amp; Intent Hub Enrichment</h3>
+            <p>Inject modular answer-first buyer copy onto core collection pages, establish internal breadcrumb hierarchy, and optimize meta tags at scale.</p>
+          </div>
+        </div>
+        <div class="plan-step">
+          <span class="plan-step__day">Phase 3</span>
+          <div class="plan-step__content">
+            <h3>Automated Rich Schema &amp; AI Search Feeds</h3>
+            <p>Deploy valid Product, Offer, AggregateRating, and BreadcrumbList JSON-LD graphs to capture Google merchant rich cards and AI citations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <Faq items={faqs} title="Frequently asked questions about e-commerce SEO" />
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <Cta
+    headline="Ready to scale your store’s organic revenue?"
+    subhead="Request your free e-commerce SEO audit today. We’ll analyze your collection architecture, faceted indexing, and product schema."
+    buttonText="Claim your free e-commerce audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .hero { max-width: 54rem; }
+  .label-mono--lime { color: var(--lime); }
+  .hero__title { margin-block: var(--space-3) var(--space-4); }
+  .hero__direct-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .section-header { margin-bottom: var(--space-7); max-width: 48rem; }
+  .section-header h2 { margin-block: var(--space-2) var(--space-2); }
+  .section-header p { font-size: 1.125rem; color: var(--text-muted); }
+  .grid { display: grid; gap: var(--space-5); }
+  .grid--3 { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .problem-box {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+  .problem-box__num {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--orange);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+  .problem-box h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .problem-box p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .plan-steps { display: flex; flex-direction: column; gap: var(--space-5); }
+  .plan-step { display: flex; gap: var(--space-5); padding-bottom: var(--space-5); border-bottom: var(--border); }
+  .plan-step:last-child { border-bottom: none; padding-bottom: 0; }
+  .plan-step__day {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--lime);
+    background-color: var(--ink);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    height: fit-content;
+    white-space: nowrap;
+  }
+  .plan-step__content h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .plan-step__content p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+</style>
+

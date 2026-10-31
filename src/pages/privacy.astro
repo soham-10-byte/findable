@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
+import { siteConfig } from '../config/site';
+
+const pageTitle = 'Privacy Policy | Findable';
+const pageDescription = 'Findable privacy policy explaining our data protection principles, analytics collection, and contact form handling.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Privacy Policy', url: 'https://TODO_DOMAIN/privacy' },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/privacy',
+    breadcrumbs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section class="section section--paper">
+    <div class="container legal-container">
+      <span class="label-mono">TRANSPARENCY</span>
+      <h1>Privacy Policy</h1>
+      <p class="legal-date">Last updated: October 2026</p>
+
+      <div class="prose">
+        <h2>1. Overview</h2>
+        <p>
+          Findable ("we", "our", or "us") respects your privacy. This Privacy Policy details our practices concerning information collected through our website (<a href="https://TODO_DOMAIN">https://TODO_DOMAIN</a>) and our audit request forms.
+        </p>
+
+        <h2>2. Information We Collect</h2>
+        <p>We collect only the minimum information necessary to provide our services and communicate with you:</p>
+        <ul>
+          <li><strong>Form Submissions:</strong> When you request a free audit or submit a contact inquiry, we collect your name, work email address, website URL, business type, and any optional notes you submit.</li>
+          <li><strong>Technical Analytics:</strong> We use Google Analytics 4 (GA4) with IP anonymization enabled to understand site traffic patterns. These scripts are loaded asynchronously after the page loads and never block your browsing experience.</li>
+        </ul>
+
+        <h2>3. How We Use Your Data</h2>
+        <p>Your data is used strictly for the following purposes:</p>
+        <ul>
+          <li>To prepare and deliver your requested manual website audit.</li>
+          <li>To respond to partnership and consultation inquiries.</li>
+          <li>To monitor and maintain website stability and technical performance.</li>
+        </ul>
+        <p>
+          <strong>We never sell, rent, or trade your personal information</strong> with third-party data brokers or advertisers.
+        </p>
+
+        <h2>4. Data Retention and Security</h2>
+        <p>
+          Form submissions are stored securely and retained only as long as necessary to fulfill your request and manage our client relationship. We implement appropriate technical safeguards to prevent unauthorized access.
+        </p>
+
+        <h2>5. Your Rights</h2>
+        <p>
+          You have the right to request access to the personal data we hold about you, request corrections, or request deletion of your information at any time.
+        </p>
+        <p>
+          For any questions or privacy inquiries, contact us directly at <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-container {
+    max-width: 50rem;
+    margin-inline: auto;
+  }
+
+  .legal-container h1 {
+    margin-block: var(--space-2) var(--space-2);
+  }
+
+  .legal-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-6);
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-3);
+  }
+
+  .prose p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: var(--space-4);
+    color: var(--text);
+  }
+
+  .prose ul {
+    margin-bottom: var(--space-5);
+    padding-left: var(--space-5);
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .prose li {
+    margin-bottom: var(--space-2);
+  }
+</style>
+

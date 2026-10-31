@@ -1,0 +1,326 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
+import Button from '../components/ui/Button.astro';
+import Icon from '../components/ui/Icon.astro';
+import Cta from '../components/ui/Cta.astro';
+import { siteConfig } from '../config/site';
+
+const pageTitle = 'About Findable | SEO, AEO and GEO Agency';
+const pageDescription = 'Findable is an SEO, AEO and GEO agency helping local, D2C and e-commerce brands get found on Google and cited by AI tools.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'About', url: 'https://TODO_DOMAIN/about' },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    type: 'AboutPage',
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/about',
+    breadcrumbs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="section section--ink">
+    <div class="container hero">
+      <span class="label-mono label-mono--lime">OUR MISSION &amp; APPROACH</span>
+      <h1 class="hero__title">
+        We help brands get found on Google, <mark class="hl">quoted by AI</mark>, and chosen by customers
+      </h1>
+      <p class="hero__direct-answer">
+        Findable is an SEO, AEO and GEO agency helping local, D2C and e-commerce brands get found on Google and cited by AI tools. We combine rigorous technical website engineering with machine-readable entity structuring so your business earns lasting visibility across search engines and generative models.
+      </p>
+      <div class="hero__actions">
+        <Button href="/free-audit" variant="primary">
+          Get your free audit <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href="/case-studies/findable-30-day-build" variant="outline-on-dark">
+          Read our build case study
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder & Entity Section -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-narrative">
+          <span class="label-mono">THE PHILOSOPHY</span>
+          <h2>Search is too important to leave to bloated software</h2>
+          <p>
+            The internet has changed dramatically. Ten blue links are no longer the only way consumers find products and services. Google AI Overviews, ChatGPT Search, Perplexity, and voice assistants answer complex questions directly.
+          </p>
+          <p>
+            Yet the vast majority of digital agencies still build websites on bloated WordPress or Shopify setups loaded with 50+ plugins, or heavy single-page apps that search crawlers struggle to render.
+          </p>
+          <p>
+            At Findable, we take an engineering-first approach. We build static, zero-JavaScript web architectures that deliver 100/100 Core Web Vitals on mobile and craft modular, answer-first content that machine extraction engines understand natively.
+          </p>
+        </div>
+
+        <div class="founder-card">
+          <div class="founder-card__badge">LEADERSHIP</div>
+          <h3>{siteConfig.founder.name}</h3>
+          <span class="founder-card__role">{siteConfig.founder.role} &amp; Technical Director</span>
+          <p class="founder-card__bio">
+            Leading Findable’s engineering and search architecture initiatives. Dedicated to building fast, transparent, and machine-readable web systems for growing businesses across India and internationally.
+          </p>
+          <div class="founder-card__links">
+            {siteConfig.founder.linkedin && (
+              <a href={siteConfig.founder.linkedin} target="_blank" rel="noopener noreferrer" class="founder-link">
+                LinkedIn <Icon name="external" size={15} />
+              </a>
+            )}
+            {siteConfig.socials.x && (
+              <a href={siteConfig.socials.x} target="_blank" rel="noopener noreferrer" class="founder-link">
+                X (Twitter) <Icon name="external" size={15} />
+              </a>
+            )}
+            {siteConfig.socials.instagram && (
+              <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" class="founder-link">
+                Instagram <Icon name="external" size={15} />
+              </a>
+            )}
+            {siteConfig.socials.github && (
+              <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer" class="founder-link">
+                GitHub <Icon name="external" size={15} />
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Core Values -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">CORE PRINCIPLES</span>
+        <h2>How we work with our partners</h2>
+        <p>Direct claims, technical honesty, and zero marketing jargon.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="value-card">
+          <span class="value-card__num">01</span>
+          <h3>Proof over decoration</h3>
+          <p>
+            We don’t use generic stock images or fabricate testimonials. We share actual Search Console data, Lighthouse audit metrics, and verified prompt citations.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <span class="value-card__num">02</span>
+          <h3>Static &amp; fast by design</h3>
+          <p>
+            If a design idea requires heavy JavaScript libraries or sluggish tracking scripts that jeopardize your mobile Core Web Vitals, we drop the idea.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <span class="value-card__num">03</span>
+          <h3>Plain language over jargon</h3>
+          <p>
+            We explain complex concepts like AEO, GEO, and JSON-LD entity graphs in clear, understandable terms so your stakeholders understand every initiative.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area & NAP -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="nap-box">
+        <div class="nap-box__header">
+          <span class="label-mono">SERVICE AREAS &amp; CONTACT</span>
+          <h2>Serving domestic and international brands</h2>
+          <p>
+            Findable works with ambitious clients across {siteConfig.contact.country} and worldwide.
+          </p>
+        </div>
+        <div class="nap-details">
+          <div class="nap-detail">
+            <strong>Agency Entity:</strong>
+            <span>{siteConfig.name} ({siteConfig.legalName})</span>
+          </div>
+          <div class="nap-detail">
+            <strong>Headquarters:</strong>
+            <span>{siteConfig.contact.city}, {siteConfig.contact.state}, {siteConfig.contact.country}</span>
+          </div>
+          <div class="nap-detail">
+            <strong>Direct Inquiries:</strong>
+            <span><a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <Cta
+    headline="Let’s review what stops Google and AI from finding your brand."
+    subhead="Request your free, comprehensive technical audit today."
+    buttonText="Claim your free audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .hero { max-width: 54rem; }
+  .label-mono--lime { color: var(--lime); }
+  .hero__title { margin-block: var(--space-3) var(--space-4); }
+  .hero__direct-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    align-items: flex-start;
+  }
+  @media (min-width: 860px) {
+    .about-grid {
+      grid-template-columns: 1.5fr 1fr;
+    }
+  }
+  .about-narrative h2 {
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    margin-block: var(--space-2) var(--space-4);
+  }
+  .about-narrative p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+  }
+  .founder-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+  }
+  .founder-card__badge {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--orange);
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+  }
+  .founder-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .founder-card__role {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: var(--space-4);
+  }
+  .founder-card__bio {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: var(--space-5);
+  }
+  .founder-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .founder-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--link);
+    background-color: var(--mist);
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: background-color 150ms ease;
+  }
+
+  .founder-link:hover {
+    background-color: color-mix(in srgb, var(--lime) 40%, var(--mist));
+  }
+  .section-header { margin-bottom: var(--space-7); max-width: 48rem; }
+  .section-header h2 { margin-block: var(--space-2) var(--space-2); }
+  .section-header p { font-size: 1.125rem; color: var(--text-muted); }
+  .grid { display: grid; gap: var(--space-5); }
+  .grid--3 { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .value-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+  .value-card__num {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--lime);
+    background-color: var(--ink);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    margin-bottom: var(--space-3);
+  }
+  .value-card h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .value-card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .nap-box {
+    background-color: var(--mist);
+    border-radius: var(--radius-md);
+    padding: clamp(1.75rem, 4vw, 3rem);
+  }
+  .nap-box__header h2 {
+    font-size: 1.75rem;
+    margin-block: var(--space-2) var(--space-2);
+  }
+  .nap-box__header p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-5);
+  }
+  .nap-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--space-4);
+    border-top: var(--border);
+    padding-top: var(--space-5);
+  }
+  .nap-detail strong {
+    display: block;
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: var(--space-1);
+  }
+  .nap-detail span {
+    font-size: 1rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+</style>
+

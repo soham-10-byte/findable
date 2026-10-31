@@ -1,0 +1,473 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Icon from '../../components/ui/Icon.astro';
+import Card from '../../components/ui/Card.astro';
+import Faq from '../../components/ui/Faq.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+const pageTitle = 'SEO Services for Local, D2C and E-commerce Brands | Findable';
+const pageDescription = 'Technical, on-page, and local SEO services designed to increase search rankings, fix Core Web Vitals, and capture predictable customer demand.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Services', url: 'https://TODO_DOMAIN/services' },
+  { name: 'SEO Services', url: 'https://TODO_DOMAIN/services/seo' },
+];
+
+const faqs = [
+  {
+    question: 'What do Findable’s SEO services cover?',
+    answer: 'Our SEO services cover end-to-end technical health, mobile Core Web Vitals optimization, site architecture, structured data markup, on-page keyword targeting, local Google Business Profile optimization, and editorial content strategies.',
+  },
+  {
+    question: 'How do you fix Core Web Vitals for our website?',
+    answer: 'We analyze your real-user field data and lab metrics, optimize LCP images, eliminate render-blocking CSS and JavaScript, self-host responsive fonts, and ensure proper layout dimensions to completely eliminate Cumulative Layout Shift (CLS).',
+  },
+  {
+    question: 'How long does it take for SEO campaigns to generate traffic?',
+    answer: 'Technical fixes and indexing improvements begin showing results within 2 to 4 weeks. Meaningful organic traffic and competitive keyword position gains typically materialize over 3 to 6 months of systematic execution.',
+  },
+  {
+    question: 'Do you offer local SEO for multi-location businesses?',
+    answer: 'Yes. We optimize Google Business Profiles, create localized landing pages with localized schema, manage consistent Name-Address-Phone (NAP) citations, and capture local 3-pack rankings for multi-location and service-area brands.',
+  },
+  {
+    question: 'How does your SEO service integrate with AEO and GEO?',
+    answer: 'Technical SEO provides the foundational crawlability and indexability that answer engines and AI search scrapers require. Our SEO work formats your data so it can be extracted for Google AI Overviews and ChatGPT citations.',
+  },
+  {
+    question: 'Do you guarantee number one rankings on Google?',
+    answer: 'No reputable agency guarantees specific rankings because search engine algorithms change constantly. Instead, we guarantee rigorous technical adherence to search engine specifications and transparent, measurable performance growth.',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/services/seo',
+    breadcrumbs,
+    service: {
+      name: 'Search Engine Optimization (SEO) Services',
+      serviceType: 'Search Engine Optimization',
+      description: pageDescription,
+      url: 'https://TODO_DOMAIN/services/seo',
+      audienceType: 'Local businesses, D2C brands, and e-commerce stores',
+    },
+    faqs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="section section--ink">
+    <div class="container hero">
+      <span class="label-mono label-mono--lime">TECHNICAL &amp; ON-PAGE OPTIMIZATION</span>
+      <h1 class="hero__title">
+        SEO services that turn <mark class="hl">search demand</mark> into paying customers
+      </h1>
+      <p class="hero__direct-answer">
+        Search Engine Optimization (SEO) from Findable improves your website's technical crawlability, mobile speed, and keyword architecture. We eliminate indexation errors, align your content with high-intent customer queries, and help your brand capture prominent organic rankings on Google and Bing.
+      </p>
+      <div class="hero__actions">
+        <Button href="/free-audit" variant="primary">
+          Get your free SEO audit <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href="/contact" variant="outline-on-dark">
+          Speak with our team
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It Is For -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">AUDIENCE TARGETING</span>
+        <h2>Who our SEO services are built for</h2>
+        <p>Specialized optimization models aligned to specific commercial requirements.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="info-card">
+          <Icon name="map-pin" size={28} />
+          <h3>Local Businesses</h3>
+          <p>
+            Service companies, clinics, and regional storefronts wanting to dominate nearby search, capture the local 3-pack, and drive phone calls and visits.
+          </p>
+          <a href="/industries/local-businesses" class="text-link">Local business SEO &rarr;</a>
+        </div>
+
+        <div class="info-card">
+          <Icon name="sparkles" size={28} />
+          <h3>D2C Brands</h3>
+          <p>
+            Direct-to-consumer lifestyle, wellness, and consumer brands looking to build sustainable customer acquisition independent of rising paid ad costs.
+          </p>
+          <a href="/industries/d2c-brands" class="text-link">D2C brand SEO &rarr;</a>
+        </div>
+
+        <div class="info-card">
+          <Icon name="cart" size={28} />
+          <h3>E-commerce Stores</h3>
+          <p>
+            Online stores seeking to scale product, collection, and category page rankings with structured schema, automated facets, and fast catalog rendering.
+          </p>
+          <a href="/industries/ecommerce-brands" class="text-link">E-commerce store SEO &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Included -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">DELIVERABLES</span>
+        <h2>What’s included in our SEO services</h2>
+        <p>Complete technical, on-page, and architectural execution with zero fluff.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="code" size={24} />
+            <h3>1. Technical SEO &amp; Core Web Vitals</h3>
+          </div>
+          <p>
+            We eliminate technical crawl barriers, resolve redirect chains, fix 404 errors, generate clean XML sitemaps, and optimize mobile LCP, INP, and CLS scores.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="search" size={24} />
+            <h3>2. Keyword &amp; Topical Authority Mapping</h3>
+          </div>
+          <p>
+            We cluster keywords by intent, map unique target topics per URL to prevent cannibalization, and architect logical parent-child URL structures.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="sparkles" size={24} />
+            <h3>3. On-Page Content &amp; Entity Architecture</h3>
+          </div>
+          <p>
+            We rewrite meta titles, descriptions, and headings to follow search engine guidelines, integrate descriptive internal links, and define clear entity identities.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="chart" size={24} />
+            <h3>4. Structured Data &amp; Schema Integration</h3>
+          </div>
+          <p>
+            We deploy connected JSON-LD graphs linking your Organization, WebSite, Services, Breadcrumbs, and FAQs directly into the server-rendered HTML.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">THE EXECUTION PLAYBOOK</span>
+        <h2>Our 4-step SEO process</h2>
+      </div>
+
+      <div class="process-list">
+        <div class="process-item">
+          <span class="process-item__num">01</span>
+          <div>
+            <h3>Comprehensive Technical Audit</h3>
+            <p>We crawl every URL on your domain, audit server headers, examine robots directives, and identify speed bottlenecks across mobile viewports.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">02</span>
+          <div>
+            <h3>Search Demand &amp; Topic Strategy</h3>
+            <p>We analyze customer search intent, audit competitor ranking footprints, and produce a prioritized technical and editorial backlog.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">03</span>
+          <div>
+            <h3>Hands-on Implementation</h3>
+            <p>We resolve code issues, implement schema graphs, rewrite priority landing pages, and test changes against strict Lighthouse budgets.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">04</span>
+          <div>
+            <h3>Performance Tracking &amp; Refinement</h3>
+            <p>We monitor Search Console indexing reports, track non-brand query growth, and refine underperforming pages with refreshed internal links.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results We Measure -->
+  <section class="section section--ink">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono label-mono--lime">ACCOUNTABILITY</span>
+        <h2>The metrics that actually matter</h2>
+        <p>We don’t track vanity numbers. We report on bottom-line search health and commercial impact.</p>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="metric-card">
+          <span class="metric-card__title">Core Web Vitals</span>
+          <p>Mobile LCP under 2.0s, CLS under 0.05, and INP under 200ms across all core templates.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">Indexation Ratio</span>
+          <p>100% valid coverage in Google Search Console with zero orphan or soft-404 pages.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">Commercial Clicks</span>
+          <p>Measurable growth in non-branded search impressions and high-intent organic clicks.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">Local 3-Pack Presence</span>
+          <p>Top-3 ranking visibility for high-value localized service and commercial queries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services & Blog Posts -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">EXPLORE MORE</span>
+        <h2>Related services and guides</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <Card
+          title="Answer Engine Optimization (AEO)"
+          href="/services/aeo"
+          tag="AEO"
+          tagVariant="aeo"
+          description="Capture zero-click searches, featured snippets, and Google AI Overviews."
+        />
+        <Card
+          title="Generative Engine Optimization (GEO)"
+          href="/services/geo"
+          tag="GEO"
+          tagVariant="geo"
+          description="Get your business cited and recommended inside ChatGPT, Perplexity, and Claude."
+        />
+        <Card
+          title="SEO vs AEO vs GEO: Full Comparison"
+          href="/blog/aeo-vs-geo-vs-seo"
+          tag="GUIDE"
+          tagVariant="neutral"
+          description="Read our comprehensive breakdown of search versus answer engine optimization."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <Faq items={faqs} title="Frequently asked questions about SEO" />
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <Cta
+    headline="Is technical debt holding back your Google rankings?"
+    subhead="Request your free SEO audit today. We’ll review your site’s code, speed, and indexing barriers."
+    buttonText="Claim your free SEO audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .hero {
+    max-width: 54rem;
+  }
+
+  .label-mono--lime {
+    color: var(--lime);
+  }
+
+  .hero__title {
+    margin-block: var(--space-3) var(--space-4);
+  }
+
+  .hero__direct-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-7);
+    max-width: 48rem;
+  }
+
+  .section-header h2 {
+    margin-block: var(--space-2) var(--space-2);
+  }
+
+  .section-header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+  }
+
+  .section--ink .section-header p {
+    color: color-mix(in srgb, var(--paper) 75%, transparent);
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .grid--2 { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+  .grid--3 { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .grid--4 { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+
+  .info-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .info-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  .info-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .text-link {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .deliverable-box {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+
+  .deliverable-box__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+
+  .deliverable-box__header h3 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .deliverable-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .process-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .process-item {
+    display: flex;
+    gap: var(--space-5);
+    padding-bottom: var(--space-5);
+    border-bottom: var(--border);
+  }
+
+  .process-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .process-item__num {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .process-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .process-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .metric-card {
+    background-color: #171719;
+    border: var(--border-dark);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+  }
+
+  .metric-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--lime);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+
+  .metric-card p {
+    color: color-mix(in srgb, var(--paper) 75%, transparent);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+</style>
+

@@ -1,0 +1,280 @@
+---
+import { siteConfig } from '../../config/site';
+import Logo from '../ui/Logo.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="/" class="footer__logo" aria-label="Findable homepage">
+          <Logo size="md" theme="dark" />
+        </a>
+        <p class="footer__descriptor">{siteConfig.descriptor}</p>
+        <p class="footer__tagline">
+          <strong>Be found. Be cited. Be chosen.</strong>
+        </p>
+
+        <!-- NAP: Name, Area, Contact -->
+        <div class="footer__nap">
+          <p class="footer__nap-item">
+            <strong>Agency:</strong> {siteConfig.name}
+          </p>
+          <p class="footer__nap-item">
+            <strong>Headquarters:</strong> {siteConfig.contact.city}, {siteConfig.contact.state}, {siteConfig.contact.country}
+          </p>
+          <p class="footer__nap-item">
+            <strong>Service areas:</strong> {siteConfig.contact.serviceAreas.join(', ')}
+          </p>
+          <p class="footer__nap-item">
+            <strong>Phone:</strong> <a href={`tel:${siteConfig.contact.phone}`}>{siteConfig.contact.phone}</a>
+          </p>
+          <p class="footer__nap-item">
+            <strong>Email:</strong> <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
+          </p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer__socials">
+          {siteConfig.socials.linkedin && (
+            <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" class="footer__social-link">
+              LinkedIn
+            </a>
+          )}
+          {siteConfig.socials.x && (
+            <a href={siteConfig.socials.x} target="_blank" rel="noopener noreferrer" class="footer__social-link">
+              X (Twitter)
+            </a>
+          )}
+          {siteConfig.socials.instagram && (
+            <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" class="footer__social-link">
+              Instagram
+            </a>
+          )}
+          {siteConfig.socials.github && (
+            <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer" class="footer__social-link">
+              GitHub
+            </a>
+          )}
+        </div>
+      </div>
+
+      <!-- Links Grid -->
+      <div class="footer__links-grid">
+        <div class="footer__column">
+          <h4 class="footer__column-title">Services</h4>
+          <ul class="footer__list">
+            <li><a href="/services">All Services</a></li>
+            <li><a href="/services/seo">Search Engine Optimization</a></li>
+            <li><a href="/services/aeo">Answer Engine Optimization</a></li>
+            <li><a href="/services/geo">Generative Engine Optimization</a></li>
+            <li><a href="/services/website-development">SEO Website Development</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__column-title">Industries</h4>
+          <ul class="footer__list">
+            <li><a href="/industries/local-businesses">Local Businesses & GBP</a></li>
+            <li><a href="/industries/d2c-brands">D2C Brands</a></li>
+            <li><a href="/industries/ecommerce-brands">E-commerce Stores</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__column-title">Company</h4>
+          <ul class="footer__list">
+            <li><a href="/about">About Findable</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/free-audit">Free Audit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__column-title">Resources</h4>
+          <ul class="footer__list">
+            <li><a href="/blog">Search & AI Blog</a></li>
+            <li><a href="/blog/what-is-aeo">What is AEO?</a></li>
+            <li><a href="/blog/what-is-geo">What is GEO?</a></li>
+            <li><a href="/rss.xml">RSS Feed</a></li>
+            <li><a href="/llms.txt">llms.txt</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer__bottom">
+      <p class="footer__copyright">
+        &copy; {currentYear} {siteConfig.name}. All rights reserved.
+      </p>
+      <div class="footer__legal">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--ink);
+    color: var(--paper);
+    padding-top: clamp(3.5rem, 6vw, 5rem);
+    padding-bottom: var(--space-6);
+    border-top: var(--border-dark);
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    margin-bottom: var(--space-8);
+  }
+
+  @media (min-width: 900px) {
+    .footer__top {
+      grid-template-columns: 1.2fr 2fr;
+    }
+  }
+
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .footer__logo {
+    display: inline-block;
+    color: var(--paper);
+    text-decoration: none;
+    margin-bottom: var(--space-2);
+  }
+
+  .footer__descriptor {
+    font-size: 0.95rem;
+    color: color-mix(in srgb, var(--paper) 75%, transparent);
+    max-width: 32ch;
+  }
+
+  .footer__tagline {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--lime);
+  }
+
+  .footer__nap {
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: var(--border-dark);
+    font-size: 0.85rem;
+    color: color-mix(in srgb, var(--paper) 70%, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .footer__nap a {
+    color: var(--lime);
+  }
+
+  .footer__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: var(--border-dark);
+  }
+
+  .footer__social-link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--lime);
+    text-decoration: none;
+    background-color: color-mix(in srgb, var(--paper) 8%, transparent);
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-sm);
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  .footer__social-link:hover {
+    background-color: var(--lime);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .footer__links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: var(--space-5);
+  }
+
+  .footer__column-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--lime);
+    margin-bottom: var(--space-3);
+  }
+
+  .footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .footer__list a {
+    color: color-mix(in srgb, var(--paper) 80%, transparent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 150ms ease;
+  }
+
+  .footer__list a:hover {
+    color: var(--paper);
+    text-decoration: underline;
+  }
+
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: var(--space-5);
+    border-top: var(--border-dark);
+    font-size: 0.85rem;
+    color: color-mix(in srgb, var(--paper) 60%, transparent);
+  }
+
+  @media (min-width: 640px) {
+    .footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .footer__legal {
+    display: flex;
+    gap: var(--space-4);
+  }
+
+  .footer__legal a {
+    color: color-mix(in srgb, var(--paper) 60%, transparent);
+    text-decoration: none;
+  }
+
+  .footer__legal a:hover {
+    color: var(--paper);
+    text-decoration: underline;
+  }
+</style>
+

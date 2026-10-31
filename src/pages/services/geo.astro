@@ -1,0 +1,381 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Icon from '../../components/ui/Icon.astro';
+import Card from '../../components/ui/Card.astro';
+import Faq from '../../components/ui/Faq.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+const pageTitle = 'Generative Engine Optimization (GEO) Agency | Findable';
+const pageDescription = 'Generative Engine Optimization (GEO) agency services to get your brand cited, recommended, and sourced by ChatGPT, Perplexity, Claude, and Gemini.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Services', url: 'https://TODO_DOMAIN/services' },
+  { name: 'GEO Services', url: 'https://TODO_DOMAIN/services/geo' },
+];
+
+const faqs = [
+  {
+    question: 'What is Generative Engine Optimization (GEO)?',
+    answer: 'Generative Engine Optimization (GEO) is the strategic optimization of website content, entity data, and external consensus so large language models (like ChatGPT, Perplexity, Claude, and Google Gemini) recommend, reference, and link to your brand during AI chat conversations.',
+  },
+  {
+    question: 'How do AI engines choose which brands to recommend?',
+    answer: 'AI engines synthesize information from retrieval-augmented generation (RAG) search indexes, training weights, and trusted external entity corroboration. They favor sites with clear entity schemas, crawlable static HTML, and corroborated authority on trusted review and reference platforms.',
+  },
+  {
+    question: 'Can you guarantee that ChatGPT will cite our website?',
+    answer: 'No agency can force an LLM output deterministically due to the probabilistic nature of generative models. We can, however, systematically maximize the statistical likelihood of citation by establishing undisputed entity authority and machine-parsable proof.',
+  },
+  {
+    question: 'Do AI bots respect robots.txt rules?',
+    answer: 'Yes. Major AI crawlers including OAI-SearchBot, GPTBot, PerplexityBot, and ClaudeBot respect robots.txt directives. We ensure your configuration invites search bots while controlling training scrapers per your business preferences.',
+  },
+  {
+    question: 'How is GEO performance measured?',
+    answer: 'We measure GEO by running monthly prompt batteries of 20 to 30 buyer queries across ChatGPT Search, Perplexity, Gemini, and Copilot. We track mention frequency, citation rates, competitor co-occurrences, and direct referral traffic in GA4.',
+  },
+  {
+    question: 'What is an entity schema graph?',
+    answer: 'An entity schema graph is a single, interconnected JSON-LD script using schema.org @graph syntax that links your organization, founder, website, products, and external profiles together with stable identifiers (#organization, #founder).',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/services/geo',
+    breadcrumbs,
+    service: {
+      name: 'Generative Engine Optimization (GEO) Agency Services',
+      serviceType: 'Generative Engine Optimization',
+      description: pageDescription,
+      url: 'https://TODO_DOMAIN/services/geo',
+      audienceType: 'Local businesses, D2C brands, and B2B enterprises',
+    },
+    faqs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="section section--ink">
+    <div class="container hero">
+      <span class="label-mono label-mono--orange">AI SEARCH &amp; CITATION ENGINE</span>
+      <h1 class="hero__title">
+        Get cited and recommended by <mark class="hl">ChatGPT &amp; Perplexity</mark>
+      </h1>
+      <p class="hero__direct-answer">
+        Generative Engine Optimization (GEO) from Findable ensures conversational AI platforms reference and recommend your business. We engineer unified entity graphs, establish third-party brand consensus, and eliminate technical barriers so LLMs cite your website as an authoritative primary source.
+      </p>
+      <div class="hero__actions">
+        <Button href="/free-audit" variant="primary">
+          Get your free GEO audit <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href="/blog/what-is-geo" variant="outline-on-dark">
+          Read our GEO guide
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It Is For -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">BUSINESS CASES</span>
+        <h2>Who benefits most from Generative Engine Optimization?</h2>
+        <p>GEO delivers outsized ROI for brands whose prospective customers use AI assistants for research.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="info-card">
+          <Icon name="sparkles" size={28} />
+          <h3>D2C &amp; Lifestyle Brands</h3>
+          <p>
+            When shoppers ask "What is the best clean skincare brand for sensitive skin?", GEO ensures your product line is cited with active links.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <Icon name="globe" size={28} />
+          <h3>B2B Software &amp; Tech</h3>
+          <p>
+            Capture software selection queries when enterprise buyers ask AI tools to compare feature matrices, pricing tiers, and vendor ratings.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <Icon name="map-pin" size={28} />
+          <h3>High-Trust Local Services</h3>
+          <p>
+            Clinics, consultants, and legal firms that want to be named as the premier localized recommendation in conversational voice queries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Included -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">GEO DELIVERABLES</span>
+        <h2>What our GEO agency service delivers</h2>
+        <p>A multi-layered technical and entity strategy engineered for AI retrieval engines.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="code" size={24} />
+            <h3>1. Machine-Parsable Entity Graphs</h3>
+          </div>
+          <p>
+            We implement unified `@graph` JSON-LD schemas linking your Organization, Founder, WebSite, and Services with unambiguous `@id` references across all pages.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="bot" size={24} />
+            <h3>2. AI Bot Crawler Accessibility</h3>
+          </div>
+          <p>
+            We optimize your `robots.txt` and server response codes to ensure OAI-SearchBot, PerplexityBot, ClaudeBot, and Bingbot can crawl your pages without rate limiting or blocking.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="sparkles" size={24} />
+            <h3>3. Third-Party Entity Consensus</h3>
+          </div>
+          <p>
+            We align your business descriptions, founder credentials, and service definitions across key citation repositories, directory nodes, and press profiles.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="chart" size={24} />
+            <h3>4. Monthly AI Visibility Benchmark Tracking</h3>
+          </div>
+          <p>
+            We maintain and test a monthly battery of 20–30 commercial prompts across ChatGPT, Perplexity, Gemini, and Copilot, measuring citation frequency and competitive share.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">GEO BLUEPRINT</span>
+        <h2>Our 4-step GEO methodology</h2>
+      </div>
+
+      <div class="process-list">
+        <div class="process-item">
+          <span class="process-item__num">01</span>
+          <div>
+            <h3>AI Visibility Baseline Audit</h3>
+            <p>We execute standard industry prompts in ChatGPT, Perplexity, and Gemini to record where your brand currently appears and identify cited rivals.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">02</span>
+          <div>
+            <h3>Entity Disambiguation Strategy</h3>
+            <p>We craft precise, factual brand definitions and schema architectures to remove ambiguity about your identity, founder, and core service offerings.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">03</span>
+          <div>
+            <h3>Technical &amp; Citation Deployment</h3>
+            <p>We deploy server-side schema graphs, verify AI bot crawl paths, and harmonize external profiles with uniform Name, Area, and Expertise signals.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">04</span>
+          <div>
+            <h3>Benchmark Tracking &amp; Iteration</h3>
+            <p>We re-run monthly prompt batteries, monitor AI referral traffic in GA4, and fine-tune content proof points to reinforce authoritative citations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results We Measure -->
+  <section class="section section--ink">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono label-mono--orange">MEASURABLE IMPACT</span>
+        <h2>How we measure Generative Engine Optimization</h2>
+        <p>Hard metrics for the AI-assisted customer conversion funnel.</p>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="metric-card">
+          <span class="metric-card__title">AI Citation Rate</span>
+          <p>The percentage of test commercial prompts where your domain is actively cited as a primary footnote or source link.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">Brand Recommendation</span>
+          <p>Frequency with which ChatGPT or Perplexity includes your company in synthesized lists of top recommendations.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">AI Referral Traffic</span>
+          <p>Measured sessions in GA4 originating from chatgpt.com, perplexity.ai, claude.ai, and gemini.google.com.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">Entity Graph Integrity</span>
+          <p>Zero schema errors and 100% interconnected entity validation across schema.org and Google validation tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Links -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">DISCOVER MORE</span>
+        <h2>Related services and guides</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <Card
+          title="Search Engine Optimization (SEO)"
+          href="/services/seo"
+          tag="SEO"
+          tagVariant="seo"
+          description="Build the foundational organic indexation and mobile speed required for AI scrapers."
+        />
+        <Card
+          title="Answer Engine Optimization (AEO)"
+          href="/services/aeo"
+          tag="AEO"
+          tagVariant="aeo"
+          description="Structure your content for featured snippets and Google AI Overviews."
+        />
+        <Card
+          title="What is Generative Engine Optimization?"
+          href="/blog/what-is-geo"
+          tag="GUIDE"
+          tagVariant="neutral"
+          description="Read our comprehensive breakdown of how AI models cite sources."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <Faq items={faqs} title="Frequently asked questions about GEO" />
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <Cta
+    headline="Is your brand absent when customers ask AI for recommendations?"
+    subhead="Request your free GEO audit today. We’ll test your commercial prompts across ChatGPT and Perplexity to identify your citation gaps."
+    buttonText="Claim your free GEO audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .hero { max-width: 54rem; }
+  .label-mono--orange { color: var(--orange); }
+  .hero__title { margin-block: var(--space-3) var(--space-4); }
+  .hero__direct-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .section-header { margin-bottom: var(--space-7); max-width: 48rem; }
+  .section-header h2 { margin-block: var(--space-2) var(--space-2); }
+  .section-header p { font-size: 1.125rem; color: var(--text-muted); }
+  .section--ink .section-header p { color: color-mix(in srgb, var(--paper) 75%, transparent); }
+  .grid { display: grid; gap: var(--space-5); }
+  .grid--2 { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+  .grid--3 { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .grid--4 { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+  .info-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .info-card h3 { margin: 0; font-size: 1.25rem; }
+  .info-card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .deliverable-box {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+  .deliverable-box__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+  .deliverable-box__header h3 { font-size: 1.25rem; margin: 0; }
+  .deliverable-box p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .process-list { display: flex; flex-direction: column; gap: var(--space-5); }
+  .process-item { display: flex; gap: var(--space-5); padding-bottom: var(--space-5); border-bottom: var(--border); }
+  .process-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .process-item__num {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .process-item h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .process-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .metric-card {
+    background-color: #171719;
+    border: var(--border-dark);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+  }
+  .metric-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--orange);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+  .metric-card p {
+    color: color-mix(in srgb, var(--paper) 75%, transparent);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+</style>
+

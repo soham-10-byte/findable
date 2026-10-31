@@ -1,0 +1,79 @@
+---
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/inter';
+import '@fontsource/jetbrains-mono/400.css';
+import '../styles/tokens.css';
+import '../styles/base.css';
+
+import BaseHead from '../components/seo/BaseHead.astro';
+import JsonLd from '../components/seo/JsonLd.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import { buildPageSchema, type PageSchemaOptions } from '../lib/schema';
+import { siteConfig } from '../config/site';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  schemaOptions?: PageSchemaOptions;
+}
+
+const {
+  title,
+  description,
+  canonicalURL,
+  image,
+  imageAlt,
+  type = 'website',
+  noindex = false,
+  publishedTime,
+  modifiedTime,
+  schemaOptions,
+} = Astro.props;
+
+const rawPath = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '');
+const cleanPath = rawPath === '' ? '/' : rawPath;
+const currentUrl = canonicalURL || new URL(cleanPath, Astro.site || siteConfig.url).href;
+
+// Construct JSON-LD schema
+const schema = buildPageSchema(
+  schemaOptions || {
+    title,
+    description,
+    url: currentUrl,
+  }
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      canonicalURL={currentUrl}
+      image={image}
+      imageAlt={imageAlt}
+      type={type}
+      noindex={noindex}
+      publishedTime={publishedTime}
+      modifiedTime={modifiedTime}
+    />
+    <JsonLd schema={schema} />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

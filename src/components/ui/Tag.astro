@@ -1,0 +1,56 @@
+---
+interface Props {
+  variant?: 'seo' | 'aeo' | 'geo' | 'neutral' | 'ink';
+  class?: string;
+}
+
+const { variant = 'neutral', class: className = '' } = Astro.props;
+---
+
+<span class={`tag tag--${variant} ${className}`}>
+  <slot />
+</span>
+
+<style>
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-pill);
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .tag--seo {
+    background-color: var(--lime);
+    color: var(--ink);
+  }
+
+  .tag--aeo {
+    background-color: var(--cyan);
+    color: var(--ink);
+  }
+
+  .tag--geo {
+    background-color: var(--orange);
+    color: var(--ink);
+  }
+
+  .tag--neutral {
+    background-color: var(--mist);
+    color: var(--ink);
+    border: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
+  }
+
+  .tag--ink {
+    background-color: var(--ink);
+    color: var(--paper);
+  }
+</style>
+

@@ -1,0 +1,49 @@
+:root {
+  /* color */
+  --ink: #0B0B0C;
+  --lime: #C8FF2E;
+  --paper: #F7F6F0;
+  --cyan: #19E3F5;
+  --orange: #FF5B1F;
+  --cobalt: #2F4BFF;
+  --olive: #55612B;
+  --sage: #A9B89B;
+  --mist: #E3E9DA;
+  --red: #E5372F;
+
+  /* semantic */
+  --bg: var(--paper);
+  --bg-dark: var(--ink);
+  --text: var(--ink);
+  --text-on-dark: var(--paper);
+  --text-muted: #4A4A44;           /* muted text on paper, passes AA */
+  --link: var(--cobalt);
+  --focus: var(--cobalt);
+
+  /* spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* borders */
+  --border: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
+  --border-dark: 1px solid color-mix(in srgb, var(--paper) 20%, transparent);
+
+  /* typography */
+  --font-heading: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+

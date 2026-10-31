@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import Icon from '../components/ui/Icon.astro';
+
+const pageTitle = 'Page Not Found (404) | Findable';
+const pageDescription = 'The page you requested could not be found on Findable. Explore our search and AI optimization services or return to the homepage.';
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  noindex={true}
+>
+  <section class="section section--paper not-found-section">
+    <div class="container not-found-container">
+      <span class="not-found-code">404</span>
+      <h1>Page not found</h1>
+      <p class="not-found-message">
+        The link you followed may be broken or the page may have been moved. You can navigate back to our main sections below:
+      </p>
+
+      <div class="helpful-links">
+        <a href="/" class="helpful-link">
+          <Icon name="arrow-right" size={16} /> Homepage
+        </a>
+        <a href="/services" class="helpful-link">
+          <Icon name="arrow-right" size={16} /> Services Overview
+        </a>
+        <a href="/services/seo" class="helpful-link">
+          <Icon name="arrow-right" size={16} /> SEO Services
+        </a>
+        <a href="/services/aeo" class="helpful-link">
+          <Icon name="arrow-right" size={16} /> Answer Engine Optimization
+        </a>
+        <a href="/services/geo" class="helpful-link">
+          <Icon name="arrow-right" size={16} /> Generative Engine Optimization
+        </a>
+        <a href="/free-audit" class="helpful-link">
+          <Icon name="arrow-right" size={16} /> Free Technical Audit
+        </a>
+      </div>
+
+      <div class="not-found-action">
+        <Button href="/" variant="primary">
+          Return to homepage
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .not-found-container {
+    max-width: 42rem;
+    text-align: center;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .not-found-code {
+    font-family: var(--font-mono);
+    font-size: clamp(4rem, 10vw, 6rem);
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: var(--space-2);
+  }
+
+  h1 {
+    margin-bottom: var(--space-3);
+  }
+
+  .not-found-message {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+  }
+
+  .helpful-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: var(--space-3);
+    width: 100%;
+    margin-bottom: var(--space-6);
+    text-align: left;
+  }
+
+  .helpful-link {
+    background-color: var(--mist);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: background-color 150ms ease;
+  }
+
+  .helpful-link:hover {
+    background-color: color-mix(in srgb, var(--lime) 30%, var(--mist));
+  }
+
+  .not-found-action {
+    margin-top: var(--space-2);
+  }
+</style>
+

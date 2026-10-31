@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Icon from '../../components/ui/Icon.astro';
+import Card from '../../components/ui/Card.astro';
+import Faq from '../../components/ui/Faq.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+const pageTitle = 'Local SEO and Google Business Profile Help | Findable';
+const pageDescription = 'Local SEO and Google Business Profile optimization to help local businesses rank in the Google Map Pack and win nearby customers on search and AI.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Industries', url: 'https://TODO_DOMAIN/industries/local-businesses' },
+  { name: 'Local Businesses', url: 'https://TODO_DOMAIN/industries/local-businesses' },
+];
+
+const faqs = [
+  {
+    question: 'How do you optimize a Google Business Profile (GBP)?',
+    answer: 'We complete every profile attribute, select optimal primary and secondary categories, align exact business name, address, and phone (NAP) details with your website schema, optimize localized photo geotags, and configure weekly Google Posts and Q&A entries.',
+  },
+  {
+    question: 'What is the Google Map Pack and why does it matter?',
+    answer: 'The Google Map Pack (or 3-Pack) is the top-of-page block of three local business listings that appears for queries with local intent. It captures over 40% of all local search clicks and drives immediate phone calls and directions requests.',
+  },
+  {
+    question: 'Do you help businesses with hidden or service-area addresses?',
+    answer: 'Yes. For service-area businesses operating without a public storefront, we configure compliant service-area profiles on GBP and implement corresponding areaServed schema on your website without publishing residential street addresses.',
+  },
+  {
+    question: 'How long does it take to rank in the local map pack?',
+    answer: 'Immediate category corrections and citation fixes can improve proximity visibility within 3 to 6 weeks. Competitive geographic radius expansion across dense metropolitan areas typically develops over 3 to 6 months.',
+  },
+  {
+    question: 'How does AEO and GEO apply to local businesses?',
+    answer: 'When nearby customers ask Siri, Google Assistant, or ChatGPT "Who is the best emergency plumber near me?", localized AEO and GEO ensure your business is the spoken recommendation by aligning localized review sentiment, proximity data, and schema.',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/industries/local-businesses',
+    breadcrumbs,
+    service: {
+      name: 'Local SEO and Google Business Profile Services',
+      serviceType: 'Local SEO',
+      description: pageDescription,
+      url: 'https://TODO_DOMAIN/industries/local-businesses',
+      audienceType: 'Local businesses and multi-location service providers',
+    },
+    faqs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="section section--ink">
+    <div class="container hero">
+      <span class="label-mono label-mono--lime">LOCAL SEO &amp; GOOGLE MAP PACK</span>
+      <h1 class="hero__title">
+        Dominate nearby search and <mark class="hl">win the Google 3-Pack</mark>
+      </h1>
+      <p class="hero__direct-answer">
+        Local SEO services from Findable help local service businesses, clinics, and regional storefronts capture top rankings in the Google Map Pack. We optimize your Google Business Profile, synchronize local citations, implement localized schema markup, and position your brand as the premier nearby recommendation.
+      </p>
+      <div class="hero__actions">
+        <Button href="/free-audit" variant="primary">
+          Get your free local audit <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href="/contact" variant="outline-on-dark">
+          Speak with our local SEO team
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Their Specific Problems -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">THE LOCAL CHALLENGE</span>
+        <h2>Why local businesses lose customers on Google</h2>
+        <p>Three common mistakes cause local competitors to outrank you in nearby searches:</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="problem-box">
+          <span class="problem-box__num">01</span>
+          <h3>Mismatched NAP Citations</h3>
+          <p>Conflicting phone numbers, suite numbers, or business name variations across directories confuse Google's local verification algorithms.</p>
+        </div>
+        <div class="problem-box">
+          <span class="problem-box__num">02</span>
+          <h3>Thin Local Landing Pages</h3>
+          <p>Generic city landing pages with duplicate copy fail to prove authentic localized relevance to search crawlers.</p>
+        </div>
+        <div class="problem-box">
+          <span class="problem-box__num">03</span>
+          <h3>Ignored Voice &amp; AI Search</h3>
+          <p>Failing to optimize for natural conversational questions ("Who does emergency AC repair near me?") leaves you out of voice assistant recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do (Mapped to SEO, AEO, GEO) -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">OUR APPROACH</span>
+        <h2>How we solve local search with SEO, AEO, and GEO</h2>
+        <p>A complete local visibility system combining maps, technical website signals, and AI recommendations.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <Card
+          title="Local SEO &amp; GBP"
+          tag="SEO"
+          tagVariant="seo"
+          description="Complete Google Business Profile audit, primary category tuning, review acquisition funnels, and consistent local citation synchronization."
+        />
+        <Card
+          title="Localized AEO"
+          tag="AEO"
+          tagVariant="aeo"
+          description="Direct-answer service FAQs answering exact local customer queries ('How much does X cost in [City]?') to capture zero-click answers."
+        />
+        <Card
+          title="Conversational GEO"
+          tag="GEO"
+          tagVariant="geo"
+          description="Local business entity schema with exact geo-coordinates, areaServed definitions, and verified review profiles so AI engines cite you."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Example Checklist / Plan -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">LOCAL EXECUTION PLAN</span>
+        <h2>Our 30-day local search turnaround</h2>
+      </div>
+
+      <div class="plan-steps">
+        <div class="plan-step">
+          <span class="plan-step__day">Days 1–7</span>
+          <div class="plan-step__content">
+            <h3>Audit &amp; Google Business Profile Overhaul</h3>
+            <p>Audit NAP citations across 50+ local directories, correct profile categories, and align website schema with GBP data.</p>
+          </div>
+        </div>
+        <div class="plan-step">
+          <span class="plan-step__day">Days 8–18</span>
+          <div class="plan-step__content">
+            <h3>Localized Landing Page Engineering</h3>
+            <p>Deploy lightning-fast service-area landing pages with localized FAQs, client review embeds, and embedded Google Maps.</p>
+          </div>
+        </div>
+        <div class="plan-step">
+          <span class="plan-step__day">Days 19–30</span>
+          <div class="plan-step__content">
+            <h3>Review Generation &amp; Local Entity Validation</h3>
+            <p>Establish automated review request flows, publish local photo updates, and monitor ranking improvements across target zip codes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <Faq items={faqs} title="Frequently asked questions about local SEO" />
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <Cta
+    headline="Ready to claim your place in the Google Map Pack?"
+    subhead="Request your free local SEO audit today. We’ll analyze your Google Business Profile and local citation consistency."
+    buttonText="Claim your free local audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .hero { max-width: 54rem; }
+  .label-mono--lime { color: var(--lime); }
+  .hero__title { margin-block: var(--space-3) var(--space-4); }
+  .hero__direct-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .section-header { margin-bottom: var(--space-7); max-width: 48rem; }
+  .section-header h2 { margin-block: var(--space-2) var(--space-2); }
+  .section-header p { font-size: 1.125rem; color: var(--text-muted); }
+  .grid { display: grid; gap: var(--space-5); }
+  .grid--3 { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .problem-box {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+  .problem-box__num {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--orange);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+  .problem-box h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .problem-box p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .plan-steps { display: flex; flex-direction: column; gap: var(--space-5); }
+  .plan-step { display: flex; gap: var(--space-5); padding-bottom: var(--space-5); border-bottom: var(--border); }
+  .plan-step:last-child { border-bottom: none; padding-bottom: 0; }
+  .plan-step__day {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--lime);
+    background-color: var(--ink);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    height: fit-content;
+    white-space: nowrap;
+  }
+  .plan-step__content h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .plan-step__content p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+</style>
+

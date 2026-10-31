@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Icon from '../../components/ui/Icon.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+const pageTitle = 'SEO, AEO and GEO Services | Findable';
+const pageDescription = 'Explore Findable’s integrated search and AI optimization services: technical SEO, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO).';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Services', url: 'https://TODO_DOMAIN/services' },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/services',
+    breadcrumbs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section class="section section--paper">
+    <div class="container">
+      <div class="page-header">
+        <span class="label-mono">SPECIALIZED AGENCY SERVICES</span>
+        <h1>SEO, AEO and GEO services engineered for modern search</h1>
+        <p class="direct-answer">
+          Findable provides technical SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and ultra-fast web development. We help ambitious brands achieve first-page rankings on Google and Bing while securing recurring direct citations in AI models like ChatGPT and Perplexity.
+        </p>
+      </div>
+
+      <div class="services-list">
+        <!-- Service 1: SEO -->
+        <article class="service-row">
+          <div class="service-row__content">
+            <span class="label-mono label-mono--seo">FOUNDATIONAL SEARCH VISIBILITY</span>
+            <h2>Search Engine Optimization (SEO)</h2>
+            <p>
+              Traditional search optimization built on rock-solid technical fundamentals, semantic content architectures, and local pack dominance.
+            </p>
+            <ul class="deliverables-list">
+              <li><Icon name="check" size={16} /> Mobile Core Web Vitals optimization and speed audits</li>
+              <li><Icon name="check" size={16} /> High-intent keyword clustering and topical authority maps</li>
+              <li><Icon name="check" size={16} /> Technical crawlability, canonicals, and indexation fixes</li>
+            </ul>
+            <Button href="/services/seo" variant="primary">
+              Learn about SEO services <Icon name="arrow-right" size={16} />
+            </Button>
+          </div>
+          <div class="service-row__badge-box">
+            <span class="service-row__badge-label">Best for</span>
+            <p>Local businesses, D2C brands, and e-commerce stores wanting predictable organic acquisition.</p>
+          </div>
+        </article>
+
+        <!-- Service 2: AEO -->
+        <article class="service-row">
+          <div class="service-row__content">
+            <span class="label-mono label-mono--aeo">DIRECT ANSWER CAPTURE</span>
+            <h2>Answer Engine Optimization (AEO)</h2>
+            <p>
+              Transform your website into the definitive answer provider for Google AI Overviews, featured snippets, and People Also Ask modules.
+            </p>
+            <ul class="deliverables-list">
+              <li><Icon name="check" size={16} /> Answer-first modular content rewriting</li>
+              <li><Icon name="check" size={16} /> FAQPage, QAPage, and structured list schema integration</li>
+              <li><Icon name="check" size={16} /> Voice search and conversational snippet targeting</li>
+            </ul>
+            <Button href="/services/aeo" variant="primary">
+              Learn about AEO services <Icon name="arrow-right" size={16} />
+            </Button>
+          </div>
+          <div class="service-row__badge-box">
+            <span class="service-row__badge-label">Best for</span>
+            <p>Brands looking to capture high-intent question queries and zero-click answer boxes.</p>
+          </div>
+        </article>
+
+        <!-- Service 3: GEO -->
+        <article class="service-row">
+          <div class="service-row__content">
+            <span class="label-mono label-mono--geo">AI ENGINE RECOMMENDATIONS</span>
+            <h2>Generative Engine Optimization (GEO)</h2>
+            <p>
+              Position your brand entity so large language models like ChatGPT, Perplexity, Claude, and Gemini consistently cite and recommend your services.
+            </p>
+            <ul class="deliverables-list">
+              <li><Icon name="check" size={16} /> Unified @graph JSON-LD entity disambiguation</li>
+              <li><Icon name="check" size={16} /> Third-party platform authority and citation consensus</li>
+              <li><Icon name="check" size={16} /> Monthly prompt benchmark tracking across AI search tools</li>
+            </ul>
+            <Button href="/services/geo" variant="primary">
+              Learn about GEO services <Icon name="arrow-right" size={16} />
+            </Button>
+          </div>
+          <div class="service-row__badge-box">
+            <span class="service-row__badge-label">Best for</span>
+            <p>B2B and D2C brands where high-consideration buyers query AI assistants for vendor recommendations.</p>
+          </div>
+        </article>
+
+        <!-- Service 4: Web Dev -->
+        <article class="service-row">
+          <div class="service-row__content">
+            <span class="label-mono">ENGINEERING EXCELLENCE</span>
+            <h2>SEO-Friendly Website Development</h2>
+            <p>
+              Ultra-fast static websites built with Astro, zero client-side hydration delays, and 100/100 Lighthouse performance out of the box.
+            </p>
+            <ul class="deliverables-list">
+              <li><Icon name="check" size={16} /> 100% server-rendered static HTML output</li>
+              <li><Icon name="check" size={16} /> Flawless Core Web Vitals on mobile devices</li>
+              <li><Icon name="check" size={16} /> Built-in schema, automated sitemaps, and clean architecture</li>
+            </ul>
+            <Button href="/services/website-development" variant="primary">
+              Learn about Web Development <Icon name="arrow-right" size={16} />
+            </Button>
+          </div>
+          <div class="service-row__badge-box">
+            <span class="service-row__badge-label">Best for</span>
+            <p>Companies frustrated by slow WordPress, Shopify, or SPA page builders that hurt search performance.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <Cta
+    headline="Not sure which service your website needs first?"
+    subhead="Request our free technical audit. We’ll analyze your site across SEO, AEO, and GEO, and deliver a prioritized roadmap."
+    buttonText="Claim your free audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: var(--space-8);
+    max-width: 52rem;
+  }
+
+  .page-header h1 {
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .direct-answer {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .service-row {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: clamp(1.75rem, 4vw, 3rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
+  }
+
+  @media (min-width: 860px) {
+    .service-row {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .service-row__content h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin-block: var(--space-2) var(--space-3);
+  }
+
+  .service-row__content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .deliverables-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-5) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    font-size: 0.95rem;
+  }
+
+  .deliverables-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--text);
+  }
+
+  .deliverables-list :global(svg) {
+    color: var(--ink);
+  }
+
+  .service-row__badge-box {
+    background-color: var(--mist);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .service-row__badge-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+
+  .service-row__badge-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .label-mono--seo { color: var(--olive); font-weight: 700; }
+  .label-mono--aeo { color: var(--cobalt); font-weight: 700; }
+  .label-mono--geo { color: var(--orange); font-weight: 700; }
+</style>

@@ -1,0 +1,243 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Tag from '../../components/ui/Tag.astro';
+import Faq from '../../components/ui/Faq.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const pageTitle = `${post.data.title} | Findable`;
+const pageDescription = post.data.description;
+const canonicalURL = `https://TODO_DOMAIN/blog/${post.slug}`;
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Blog', url: 'https://TODO_DOMAIN/blog' },
+  { name: post.data.title, url: canonicalURL },
+];
+
+const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const formattedUpdatedDate = post.data.updatedDate
+  ? post.data.updatedDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  : null;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalURL={canonicalURL}
+  type="article"
+  publishedTime={post.data.pubDate.toISOString()}
+  modifiedTime={post.data.updatedDate?.toISOString() || post.data.pubDate.toISOString()}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: canonicalURL,
+    breadcrumbs,
+    faqs: post.data.faqs,
+    blogPost: {
+      title: post.data.title,
+      description: post.data.description,
+      url: canonicalURL,
+      datePublished: post.data.pubDate.toISOString().split('T')[0],
+      dateModified: (post.data.updatedDate || post.data.pubDate).toISOString().split('T')[0],
+      faqs: post.data.faqs,
+    },
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <article class="post-article">
+    <header class="section section--ink post-header">
+      <div class="container post-header__container">
+        <div class="post-header__tags">
+          {post.data.tags.map((tag) => (
+            <Tag variant="seo">{tag}</Tag>
+          ))}
+        </div>
+
+        <h1 class="post-header__title">{post.data.title}</h1>
+        <p class="post-header__description">{post.data.description}</p>
+
+        <div class="post-header__byline">
+          <span>By <a href="/about" class="author-link">{post.data.author}</a></span>
+          <span class="meta-separator">&bull;</span>
+          <span>Published <time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time></span>
+          {formattedUpdatedDate && (
+            <>
+              <span class="meta-separator">&bull;</span>
+              <span>Updated <time datetime={post.data.updatedDate?.toISOString()}>{formattedUpdatedDate}</time></span>
+            </>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <div class="section section--paper">
+      <div class="container article-body-container">
+        <div class="prose">
+          <Content />
+        </div>
+
+        {post.data.faqs && post.data.faqs.length > 0 && (
+          <div class="post-faqs">
+            <Faq items={post.data.faqs} title="Key questions answered in this guide" subtitle="" />
+          </div>
+        )}
+      </div>
+    </div>
+  </article>
+
+  <Cta
+    headline="Want to implement these optimizations on your website?"
+    subhead="Request your free, comprehensive technical audit today."
+    buttonText="Claim your free audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .post-header {
+    padding-top: clamp(3rem, 6vw, 5rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    border-bottom: var(--border-dark);
+  }
+
+  .post-header__container {
+    max-width: 52rem;
+  }
+
+  .post-header__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+  }
+
+  .post-header__title {
+    margin-bottom: var(--space-4);
+  }
+
+  .post-header__description {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-5);
+  }
+
+  .post-header__byline {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--sage);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .author-link {
+    color: var(--lime);
+    text-decoration: underline;
+  }
+
+  .meta-separator {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .article-body-container {
+    max-width: 50rem;
+    margin-inline: auto;
+  }
+
+  .prose :global(h2) {
+    font-size: 1.85rem;
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-3);
+  }
+
+  .prose :global(h3) {
+    font-size: 1.35rem;
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-2);
+  }
+
+  .prose :global(p) {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+    color: var(--text);
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin-bottom: var(--space-5);
+    padding-left: var(--space-6);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  .prose :global(li) {
+    margin-bottom: var(--space-2);
+  }
+
+  .prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin-block: var(--space-6);
+    font-size: 0.95rem;
+  }
+
+  .prose :global(th),
+  .prose :global(td) {
+    padding: var(--space-3) var(--space-4);
+    border: var(--border);
+    text-align: left;
+  }
+
+  .prose :global(th) {
+    background-color: var(--mist);
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  .prose :global(pre) {
+    background-color: var(--ink);
+    color: var(--paper);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    font-size: 0.9rem;
+    margin-bottom: var(--space-5);
+  }
+
+  .post-faqs {
+    margin-top: var(--space-8);
+    padding-top: var(--space-7);
+    border-top: var(--border);
+  }
+</style>
+

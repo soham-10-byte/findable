@@ -1,0 +1,381 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Icon from '../../components/ui/Icon.astro';
+import Card from '../../components/ui/Card.astro';
+import Faq from '../../components/ui/Faq.astro';
+import Cta from '../../components/ui/Cta.astro';
+
+const pageTitle = 'SEO-Friendly Website Development | Findable';
+const pageDescription = 'Custom, ultra-fast static website development built with Astro to guarantee 100/100 Core Web Vitals, instant indexation, and machine-readable schema.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://TODO_DOMAIN/' },
+  { name: 'Services', url: 'https://TODO_DOMAIN/services' },
+  { name: 'Website Development', url: 'https://TODO_DOMAIN/services/website-development' },
+];
+
+const faqs = [
+  {
+    question: 'What makes a website truly SEO-friendly?',
+    answer: 'An SEO-friendly website ships fully rendered static HTML so search and AI crawlers read every word without executing JavaScript. It loads in under 2 seconds on mobile, has zero layout shift, includes connected JSON-LD schemas, and features clean, logical URL hierarchies.',
+  },
+  {
+    question: 'Why do you build websites with Astro instead of WordPress?',
+    answer: 'WordPress relies on heavy database queries, bloated PHP execution, and dozens of third-party plugins that drag down mobile Core Web Vitals. Astro generates pre-compiled static HTML with 0 KB JavaScript overhead by default, delivering sub-second load times globally.',
+  },
+  {
+    question: 'Can non-technical team members edit blog posts and content?',
+    answer: 'Yes. We configure Astro Content Collections with simple Markdown or MDX frontmatter, or integrate lightweight headless CMS platforms (like Sanity, Keystatic, or Decap) so your marketing team can publish and edit content effortlessly.',
+  },
+  {
+    question: 'Do your websites come with schema markup pre-configured?',
+    answer: 'Yes. Every template includes native, valid schema.org JSON-LD graphs connecting your Organization, WebSite, Author, BreadcrumbList, Services, and FAQs, validated against Google Rich Results tests before launch.',
+  },
+  {
+    question: 'How fast will our new website load?',
+    answer: 'Our websites are engineered to pass 100/100 Lighthouse mobile audits with Largest Contentful Paint (LCP) under 1.5 seconds, Cumulative Layout Shift (CLS) under 0.05, and Interaction to Next Paint (INP) under 100 milliseconds.',
+  },
+  {
+    question: 'Where can our static website be hosted?',
+    answer: 'We deploy static websites to global edge networks like Cloudflare Pages, Vercel, or Netlify. This guarantees ultra-fast TTFB (Time to First Byte) under 100ms in every major city worldwide with automated HTTPS and DDoS protection.',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  schemaOptions={{
+    title: pageTitle,
+    description: pageDescription,
+    url: 'https://TODO_DOMAIN/services/website-development',
+    breadcrumbs,
+    service: {
+      name: 'SEO-Friendly Website Development',
+      serviceType: 'Web Development',
+      description: pageDescription,
+      url: 'https://TODO_DOMAIN/services/website-development',
+      audienceType: 'Businesses wanting high-performance, search-optimized static web applications',
+    },
+    faqs,
+  }}
+>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero Section -->
+  <section class="section section--ink">
+    <div class="container hero">
+      <span class="label-mono label-mono--lime">HIGH-PERFORMANCE WEB ENGINEERING</span>
+      <h1 class="hero__title">
+        SEO-friendly website development <mark class="hl">engineered for speed</mark>
+      </h1>
+      <p class="hero__direct-answer">
+        SEO-friendly website development by Findable replaces bloated page builders with lightning-fast static HTML websites. Built with modern tools like Astro, our sites achieve 100/100 mobile Core Web Vitals, render without client-side JavaScript delays, and provide clean machine-readable architecture for search engines and AI assistants.
+      </p>
+      <div class="hero__actions">
+        <Button href="/free-audit" variant="primary">
+          Audit your current website <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href="/case-studies/findable-30-day-build" variant="outline-on-dark">
+          See our own site specs
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem with Legacy Sites -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">THE SPEED PENALTY</span>
+        <h2>Why standard websites struggle in search</h2>
+        <p>Most commercial websites fail Google’s Core Web Vitals before a single visitor converts.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="info-card">
+          <Icon name="code" size={28} />
+          <h3>JavaScript Hydration Lag</h3>
+          <p>
+            React and Next.js SPAs send empty HTML shells that force search crawlers to execute heavy bundles just to see headings and content, delaying indexation.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <Icon name="chart" size={28} />
+          <h3>Plugin &amp; CMS Bloat</h3>
+          <p>
+            WordPress and Shopify themes load dozens of unneeded CSS frameworks, trackers, and widgets that destroy mobile LCP and trigger high layout shift (CLS).
+          </p>
+        </div>
+
+        <div class="info-card">
+          <Icon name="bot" size={28} />
+          <h3>Opaque Entity Architecture</h3>
+          <p>
+            Without clean DOM semantics and connected JSON-LD schemas, AI search bots cannot parse your brand’s relationships or extract authoritative answers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Included -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">ENGINEERING DELIVERABLES</span>
+        <h2>What’s included in our website development</h2>
+        <p>Every website we build is a flawless technical showcase of speed, accessibility, and search architecture.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="code" size={24} />
+            <h3>1. Astro Static Site Generation</h3>
+          </div>
+          <p>
+            100% server-compiled static HTML output with 0 KB first-party JavaScript overhead. Your content is immediately available in the initial network packet.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="chart" size={24} />
+            <h3>2. 100/100 Core Web Vitals Guarantee</h3>
+          </div>
+          <p>
+            Self-hosted WOFF2 fonts with size-adjust fallbacks to prevent layout shift, eager LCP image preloads, and responsive AVIF/WebP image generation.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="sparkles" size={24} />
+            <h3>3. Native JSON-LD Schema Graphs</h3>
+          </div>
+          <p>
+            Interconnected Organization, WebSite, Person, Service, and Breadcrumb schemas rendered directly into the HTML source, matching visible content.
+          </p>
+        </div>
+
+        <div class="deliverable-box">
+          <div class="deliverable-box__header">
+            <Icon name="globe" size={24} />
+            <h3>4. Global Edge CDN Deployment</h3>
+          </div>
+          <p>
+            Hosted on Cloudflare Pages or Vercel with immutable one-year asset caching, security headers, automated XML sitemaps, and dynamic robots.txt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">DEVELOPMENT PROCESS</span>
+        <h2>How we build your SEO-first website</h2>
+      </div>
+
+      <div class="process-list">
+        <div class="process-item">
+          <span class="process-item__num">01</span>
+          <div>
+            <h3>Information Architecture &amp; Topic Map</h3>
+            <p>We structure every route, URL hierarchy, and parent-child relationship to maximize organic authority and eliminate internal cannibalization.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">02</span>
+          <div>
+            <h3>Design System &amp; Accessible Components</h3>
+            <p>We build lightweight, accessible Astro components using pure CSS custom properties, ensuring high visual impact with zero framework bloat.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">03</span>
+          <div>
+            <h3>Static Build &amp; Schema Integration</h3>
+            <p>We compile your static pages, wire up typed Content Collections for easy authoring, and embed validated schema graphs.</p>
+          </div>
+        </div>
+
+        <div class="process-item">
+          <span class="process-item__num">04</span>
+          <div>
+            <h3>Lighthouse Audit &amp; Edge Launch</h3>
+            <p>We test the production build against mobile 95+ performance budgets, verify robots directives, and deploy to Cloudflare's global edge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Specs -->
+  <section class="section section--ink">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono label-mono--lime">TECHNICAL BUDGETS</span>
+        <h2>Strict engineering limits on every build</h2>
+        <p>We don’t compromise on performance standards.</p>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="metric-card">
+          <span class="metric-card__title">&lt; 2.0s LCP</span>
+          <p>Largest Contentful Paint loads under 2.0 seconds on throttled 4G mobile connections.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">&lt; 0.05 CLS</span>
+          <p>Cumulative Layout Shift is virtually zero thanks to explicit dimensions and font metric matching.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">0 KB Runtime JS</span>
+          <p>Zero JavaScript hydration overhead on marketing pages. Total first-party JS capped at 5 KB.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-card__title">100% Static HTML</span>
+          <p>100% of visible content is delivered in the initial server response for instant AI scraping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Links -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">DISCOVER MORE</span>
+        <h2>Related services and case studies</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <Card
+          title="The Findable 30-Day Build Case Study"
+          href="/case-studies/findable-30-day-build"
+          tag="CASE STUDY"
+          tagVariant="neutral"
+          description="Read how we built our own website to achieve 100/100 Lighthouse scores."
+        />
+        <Card
+          title="Technical SEO Services"
+          href="/services/seo"
+          tag="SEO"
+          tagVariant="seo"
+          description="Learn how our technical SEO services complement your web development."
+        />
+        <Card
+          title="Generative Engine Optimization (GEO)"
+          href="/services/geo"
+          tag="GEO"
+          tagVariant="geo"
+          description="Ensure your new website is cited across ChatGPT and Perplexity."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <Faq items={faqs} title="Frequently asked questions about website development" />
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <Cta
+    headline="Is your slow website hurting your search rankings and AI citations?"
+    subhead="Request your free technical audit. We’ll test your site speed, mobile Core Web Vitals, and code architecture."
+    buttonText="Claim your free website audit"
+    buttonHref="/free-audit"
+  />
+</BaseLayout>
+
+<style>
+  .hero { max-width: 54rem; }
+  .label-mono--lime { color: var(--lime); }
+  .hero__title { margin-block: var(--space-3) var(--space-4); }
+  .hero__direct-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--paper) 85%, transparent);
+    margin-bottom: var(--space-6);
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .section-header { margin-bottom: var(--space-7); max-width: 48rem; }
+  .section-header h2 { margin-block: var(--space-2) var(--space-2); }
+  .section-header p { font-size: 1.125rem; color: var(--text-muted); }
+  .section--ink .section-header p { color: color-mix(in srgb, var(--paper) 75%, transparent); }
+  .grid { display: grid; gap: var(--space-5); }
+  .grid--2 { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+  .grid--3 { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .grid--4 { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+  .info-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .info-card h3 { margin: 0; font-size: 1.25rem; }
+  .info-card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .deliverable-box {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+  }
+  .deliverable-box__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+  .deliverable-box__header h3 { font-size: 1.25rem; margin: 0; }
+  .deliverable-box p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .process-list { display: flex; flex-direction: column; gap: var(--space-5); }
+  .process-item { display: flex; gap: var(--space-5); padding-bottom: var(--space-5); border-bottom: var(--border); }
+  .process-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .process-item__num {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .process-item h3 { font-size: 1.25rem; margin-bottom: var(--space-2); }
+  .process-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+  .metric-card {
+    background-color: #171719;
+    border: var(--border-dark);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+  }
+  .metric-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--lime);
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+  .metric-card p {
+    color: color-mix(in srgb, var(--paper) 75%, transparent);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+</style>
+
