@@ -227,3 +227,4 @@ npm run build
 &copy; 2026 Findable Agency. All rights reserved. Built with 100% clean HTML & 0 KB runtime JavaScript.
 
 </div>
+

@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 const siteUrl = process.env.PUBLIC_SITE_URL && !process.env.PUBLIC_SITE_URL.includes('TODO_')
   ? process.env.PUBLIC_SITE_URL
-  : (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://findable-website.vercel.app');
+  : (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://findableseo.vercel.app');
 
 export default defineConfig({
   site: siteUrl,

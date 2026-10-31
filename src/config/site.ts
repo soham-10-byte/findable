@@ -37,7 +37,7 @@ export interface SiteConfig {
 
 const defaultUrl = (import.meta.env.PUBLIC_SITE_URL && !import.meta.env.PUBLIC_SITE_URL.includes('TODO_'))
   ? import.meta.env.PUBLIC_SITE_URL.replace(/\/$/, '')
-  : 'https://findable-website.vercel.app';
+  : 'https://findableseo.vercel.app';
 
 export const siteConfig: SiteConfig = {
   name: 'Findable',
