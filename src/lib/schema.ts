@@ -2,7 +2,7 @@ import { siteConfig } from '../config/site';
 
 export interface BreadcrumbItem {
   name: string;
-  url: string;
+  url?: string;
 }
 
 export interface FaqItem {
@@ -126,7 +126,13 @@ export function buildPageSchema(options: PageSchemaOptions) {
         '@type': 'ListItem',
         position: idx + 1,
         name: crumb.name,
-        item: crumb.url,
+        ...(crumb.url
+          ? {
+              item: crumb.url.startsWith('http')
+                ? crumb.url
+                : `${baseDomain}${crumb.url.startsWith('/') ? crumb.url : `/${crumb.url}`}`,
+            }
+          : {}),
       })),
     };
     graph.push(breadcrumbListEntity);
