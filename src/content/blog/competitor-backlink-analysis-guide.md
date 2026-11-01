@@ -1,6 +1,7 @@
 ---
-title: "Competitor Backlink Analysis Guide: Reverse-Engineer High-Authority Links"
-description: "Master competitor backlink analysis in 2026. Discover exactly where competitors get their best links and learn actionable outreach strategies to replicate them."
+title: "Competitor Backlink Analysis Guide"
+seoTitle: "Competitor Backlink Analysis Guide | Findable"
+description: "Master competitor backlink analysis. Discover where competitors earn top links and use actionable outreach strategies to replicate high-authority backlinks."
 pubDate: 2026-02-12
 author: "Ms. Debopriya Mullick"
 tags: ["Link Building", "Competitor Analysis", "Backlinks", "Off-Page SEO"]

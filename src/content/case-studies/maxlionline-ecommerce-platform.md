@@ -1,6 +1,8 @@
 ---
 title: "MaxliOnline.com: Engineering an Ultra-Fast E-commerce Platform for Premium Perfumes"
+seoTitle: "Case Study: MaxliOnline Ecommerce Store | Findable"
 description: "How we developed the official digital storefront for MAXLI Perfumes, delivering an intuitive shopping experience, high mobile conversion rates, and automated product schemas."
+seoDescription: "How Findable engineered MaxliOnline.com, a high-converting e-commerce platform for MAXLI Perfumes with automated product schemas and fast mobile UX."
 client: "MaxliOnline.com"
 industry: "E-commerce Development / D2C Storefront"
 pubDate: 2026-02-25

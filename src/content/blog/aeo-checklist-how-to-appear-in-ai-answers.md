@@ -1,5 +1,6 @@
 ---
-title: "The 2026 AEO Checklist: How to Appear in AI Answers & Overviews"
+title: "AEO Checklist: How to Appear in AI Answers"
+seoTitle: "AEO Checklist: How to Rank in AI Answers | Findable"
 description: "A practical Answer Engine Optimization (AEO) checklist to get your brand cited in Google AI Overviews, Perplexity, ChatGPT Search, and Copilot."
 pubDate: 2026-02-14
 author: "Ms. Debopriya Mullick"

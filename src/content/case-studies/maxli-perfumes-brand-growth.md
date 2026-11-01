@@ -1,6 +1,8 @@
 ---
 title: "MAXLI Perfumes: Building a D2C Fragrance Brand to ₹2 Lakh+ Monthly Rolling Revenue"
+seoTitle: "Case Study: MAXLI Perfumes Brand Growth | Findable"
 description: "A full-funnel brand building case study showing how MAXLI Perfumes scaled to ₹2 Lakh+ in monthly rolling revenue through social media growth, SEO website development, and omnichannel marketing."
+seoDescription: "How MAXLI Perfumes scaled to ₹2 lakh+ monthly rolling revenue through brand building, social media establishment, SEO development, and digital marketing."
 client: "MAXLI Perfumes"
 industry: "Digital Marketing / Luxury Fragrance & D2C"
 pubDate: 2026-02-22

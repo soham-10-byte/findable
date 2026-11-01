@@ -1,5 +1,6 @@
 ---
 title: "Best SEMrush Alternatives: Free and Paid Tools for 2026"
+seoTitle: "Best SEMrush Alternatives: Free & Paid Tools | Findable"
 description: "Compare top SEMrush alternatives for keyword research, backlink tracking, technical site audits, and competitor intelligence across every budget level."
 pubDate: 2026-02-03
 author: "Ms. Debopriya Mullick"

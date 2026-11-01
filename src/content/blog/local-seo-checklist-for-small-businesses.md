@@ -1,5 +1,6 @@
 ---
 title: "The Ultimate Local SEO Checklist for Small Businesses (2026)"
+seoTitle: "Local SEO Checklist for Small Businesses | Findable"
 description: "A complete step-by-step local SEO checklist to dominate Google Maps 3-pack, optimize local citations, and capture nearby customers ready to buy."
 pubDate: 2026-02-08
 author: "Ms. Debopriya Mullick"

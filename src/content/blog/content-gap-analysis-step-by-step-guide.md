@@ -1,6 +1,7 @@
 ---
-title: "Content Gap Analysis: Step-by-Step Guide to Outranking Competitors"
-description: "Learn how to conduct a comprehensive content gap analysis. Discover high-converting keywords your competitors rank for and create pages that win market share."
+title: "Content Gap Analysis: Guide to Outranking Competitors"
+seoTitle: "Content Gap Analysis: Outrank Competitors | Findable"
+description: "Learn how to conduct a content gap analysis. Discover high-value keywords your competitors rank for and build targeted pages that win search market share."
 pubDate: 2026-02-11
 author: "Ms. Debopriya Mullick"
 tags: ["Content Strategy", "Content Gap Analysis", "Keyword Research", "SEO Audits"]

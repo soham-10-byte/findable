@@ -1,6 +1,7 @@
 ---
-title: "Digital Marketing Agency Pricing in India (2026 Comprehensive Guide)"
-description: "Everything you need to know about digital marketing agency pricing in India for 2026. Compare full-service retainers, SEO, Google Ads, social media, and hidden costs."
+title: "Digital Marketing Agency Pricing in India"
+seoTitle: "Digital Marketing Agency Pricing in India | Findable"
+description: "Understand digital marketing agency pricing in India. Compare full-service retainers, SEO, Google Ads, social media costs, and common hidden agency fees."
 pubDate: 2026-02-19
 author: "Ms. Debopriya Mullick"
 tags: ["Digital Marketing", "Agency Pricing", "India Business", "Marketing Retainers"]

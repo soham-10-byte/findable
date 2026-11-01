@@ -21,8 +21,9 @@ interface Props {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-const pageTitle = `${post.data.title} | Findable`;
-const pageDescription = post.data.description;
+const rawTitle = post.data.seoTitle || post.data.title;
+const pageTitle = rawTitle.includes('Findable') ? rawTitle : `${rawTitle} | Findable`;
+const pageDescription = post.data.seoDescription || post.data.description;
 const canonicalURL = `https://findableseo.vercel.app/blog/${post.slug}`;
 
 const breadcrumbs = [

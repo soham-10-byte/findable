@@ -1,6 +1,7 @@
 ---
-title: "ChatGPT & Gemini Visibility Guide for Local Businesses (2026)"
-description: "How to ensure ChatGPT, Google Gemini, and Perplexity recommend your local business when customers ask conversational questions in your city or area."
+title: "ChatGPT & Gemini Visibility Guide for Local Businesses"
+seoTitle: "ChatGPT & Gemini Guide for Local SEO | Findable"
+description: "Learn how to get your local business recommended by ChatGPT, Google Gemini, and Perplexity when nearby customers ask conversational search queries."
 pubDate: 2026-02-16
 author: "Ms. Debopriya Mullick"
 tags: ["Local SEO", "ChatGPT", "Google Gemini", "AI Search", "Local Marketing"]

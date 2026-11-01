@@ -1,6 +1,8 @@
 ---
 title: "How Much Does SEO Cost in India? Real Pricing Breakdown (2026)"
+seoTitle: "How Much Does SEO Cost in India? Pricing Guide | Findable"
 description: "A transparent breakdown of SEO pricing in India for 2026. Compare hourly rates, monthly retainers, local vs enterprise costs, and what to expect for your budget."
+seoDescription: "Transparent guide to SEO pricing in India. Compare hourly rates, monthly retainers, local vs enterprise costs, and expected ROI for your marketing budget."
 pubDate: 2026-02-04
 author: "Ms. Debopriya Mullick"
 tags: ["SEO Pricing", "India Business", "Digital Marketing", "Agency Retainers"]

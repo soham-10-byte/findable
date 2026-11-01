@@ -1,6 +1,7 @@
 ---
-title: "The Complete Guide to Blog SEO: Writing Posts That Rank in 2026"
-description: "A comprehensive, step-by-step masterclass on blog SEO. Learn how to conduct keyword research, write for Google and AI engines, optimize structure, and earn citations."
+title: "Blog SEO Guide: Writing Posts That Rank"
+seoTitle: "Blog SEO: How to Write Posts That Rank | Findable"
+description: "Learn blog SEO strategies that drive organic traffic. Conduct keyword research, optimize structure for Google and AI search, and write posts that rank."
 pubDate: 2026-02-06
 author: "Ms. Debopriya Mullick"
 tags: ["Blog SEO", "Content Marketing", "On-Page SEO", "Search Rankings"]

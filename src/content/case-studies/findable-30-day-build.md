@@ -1,6 +1,8 @@
 ---
 title: "The Findable 30-Day Build: Engineering a Zero-JS Agency Site for Instant AI and Search Indexing"
+seoTitle: "Case Study: Fast Agency Website Build | Findable"
 description: "How we engineered Findable's own website to pass Core Web Vitals on mobile, achieve 100/100 Lighthouse scores, and get fully indexed by search and AI bots within days."
+seoDescription: "How we engineered Findable's website to pass mobile Core Web Vitals, score 100/100 on Lighthouse, and index quickly on Google and AI search engines."
 client: "Findable Agency (Internal Case Study)"
 industry: "Digital Agency / Technical SEO"
 pubDate: 2026-02-15

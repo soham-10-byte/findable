@@ -19,8 +19,9 @@ interface Props {
 const { study } = Astro.props;
 const { Content } = await study.render();
 
-const pageTitle = `${study.data.title} | Findable Case Study`;
-const pageDescription = study.data.description;
+const rawTitle = study.data.seoTitle || `${study.data.title} | Findable Case Study`;
+const pageTitle = rawTitle.includes('Findable') ? rawTitle : `${rawTitle} | Findable`;
+const pageDescription = study.data.seoDescription || study.data.description;
 const canonicalURL = `https://findableseo.vercel.app/case-studies/${study.slug}`;
 
 const breadcrumbs = [

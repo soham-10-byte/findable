@@ -1,6 +1,8 @@
 ---
 title: "RASOI: Digitizing School and College Canteens to Eliminate Peak-Hour Rush"
+seoTitle: "Case Study: RASOI Canteen Management System | Findable"
 description: "How we engineered RASOI, a specialized smart canteen management platform for educational institutions to digitize ordering, queue management, and inventory workflows during peak lunch rushes."
+seoDescription: "How Findable built RASOI, a smart canteen management platform for schools and colleges that digitizes ordering and eliminates peak-hour lunch rush delays."
 client: "RASOI Canteen Platform"
 industry: "Software Development / Institutional SaaS"
 pubDate: 2026-02-28

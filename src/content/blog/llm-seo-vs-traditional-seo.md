@@ -1,5 +1,6 @@
 ---
 title: "LLM SEO vs. Traditional SEO: What is Changing in 2026?"
+seoTitle: "LLM SEO vs Traditional SEO: Key Differences | Findable"
 description: "Compare LLM SEO (AI search optimization) with traditional SEO. Understand how LLM retrieval works, key metrics, ranking factors, and how to adapt your strategy."
 pubDate: 2026-02-15
 author: "Ms. Debopriya Mullick"

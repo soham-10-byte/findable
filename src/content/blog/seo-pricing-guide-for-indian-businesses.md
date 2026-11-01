@@ -1,5 +1,6 @@
 ---
 title: "SEO Pricing Guide for Indian Businesses: What to Budget in 2026"
+seoTitle: "SEO Pricing Guide for Indian Businesses | Findable"
 description: "A comprehensive pricing guide for Indian business owners and startup founders. Understand retainer models, project fees, deliverables, and ROI expectations."
 pubDate: 2026-02-10
 author: "Ms. Debopriya Mullick"

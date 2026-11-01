@@ -1,5 +1,6 @@
 ---
 title: "The Ultimate Ecommerce SEO Audit Checklist for 2026"
+seoTitle: "Ecommerce SEO Audit Checklist | Findable"
 description: "A step-by-step checklist to audit your ecommerce store. Optimize product pages, category facets, schema markup, site architecture, and crawl efficiency."
 pubDate: 2026-02-07
 author: "Ms. Debopriya Mullick"

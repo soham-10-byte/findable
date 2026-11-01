@@ -1,5 +1,6 @@
 ---
 title: "Ecommerce SEO: The Product-Page Optimization Masterclass (2026)"
+seoTitle: "Ecommerce Product Page SEO Guide | Findable"
 description: "Learn how to optimize ecommerce product pages for high Google rankings, AI shopping recommendations, and maximum customer conversion rates."
 pubDate: 2026-02-18
 author: "Ms. Debopriya Mullick"

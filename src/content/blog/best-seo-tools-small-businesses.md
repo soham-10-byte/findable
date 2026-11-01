@@ -1,6 +1,7 @@
 ---
-title: "The 8 Best SEO Tools for Small Businesses in 2026 (Budget-Tested)"
-description: "Discover the best affordable and free SEO tools tailored for small business owners. Compare rank trackers, keyword research, site audits, and local SEO tools."
+title: "Best SEO Tools for Small Businesses"
+seoTitle: "Best SEO Tools for Small Businesses | Findable"
+description: "Discover affordable and free SEO tools tailored for small businesses. Compare rank trackers, keyword research, technical audits, and local search tools."
 pubDate: 2026-02-17
 author: "Ms. Debopriya Mullick"
 tags: ["SEO Tools", "Small Business", "Budget SEO", "Digital Marketing"]
