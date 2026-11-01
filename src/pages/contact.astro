@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
 import Button from '../components/ui/Button.astro';
 import Icon from '../components/ui/Icon.astro';
+import Faq from '../components/ui/Faq.astro';
 import { siteConfig } from '../config/site';
 
 const pageTitle = 'Contact Findable | SEO, AEO and GEO Agency';
@@ -15,6 +16,29 @@ const breadcrumbs = [
 
 const formEndpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || 'https://api.web3forms.com/submit';
 const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
+
+const contactFaqs = [
+  {
+    question: 'What services can I enquire about?',
+    answer: 'You can contact Findable regarding Search Engine Optimization (SEO), Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), custom SEO-friendly website development, technical SEO audits, and multi-channel digital growth campaigns.',
+  },
+  {
+    question: 'Does Findable work with small and local businesses?',
+    answer: 'Yes. We work closely with local businesses, independent clinics, showrooms, and regional service providers, providing localized SEO, Google Business Profile optimization, and local citation management to dominate nearby search and win the Google Map Pack.',
+  },
+  {
+    question: 'Can I request a technical SEO audit through this form?',
+    answer: 'Absolutely. You can submit your website URL and current search challenges via this contact form, or use our dedicated Free Audit request page for a comprehensive 48-hour manual technical inspection.',
+  },
+  {
+    question: 'Can I contact Findable for website development or a redesign?',
+    answer: 'Yes. We specialize in designing and engineering modern, ultra-fast static websites built with Astro. Our builds deliver 100/100 mobile Core Web Vitals, 0 KB first-party runtime JavaScript, and pre-configured Schema.org structured data.',
+  },
+  {
+    question: 'How do I get started with Findable?',
+    answer: 'Getting started is straightforward: submit your enquiry through the contact form above with your website URL and project goals. Our team will review your requirements and reach out to discuss the scope and actionable next steps.',
+  },
+];
 ---
 
 <BaseLayout
@@ -26,10 +50,12 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     description: pageDescription,
     url: 'https://findableseo.vercel.app/contact',
     breadcrumbs,
+    faqs: contactFaqs,
   }}
 >
   <Breadcrumbs items={breadcrumbs} />
 
+  <!-- 1. Hero & Form Area -->
   <section class="section section--paper">
     <div class="container contact-grid">
       <!-- Contact Info -->
@@ -37,7 +63,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
         <span class="label-mono">DIRECT COMMUNICATION</span>
         <h1>Speak with our technical search team</h1>
         <p class="contact-intro">
-          Have questions about your current search rankings, AI citations, or website architecture? Contact our team directly.
+          Whether you are looking to scale your organic search rankings on Google, secure persistent brand citations in AI answer engines like ChatGPT and Perplexity, diagnose critical Core Web Vitals bottlenecks, or engineer a high-speed, SEO-first website, Findable is here to help. Reach out directly to discuss your digital growth objectives with our technical specialists.
         </p>
 
         <div class="contact-details-box">
@@ -75,7 +101,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
         </div>
 
         <div class="audit-prompt">
-          <h3>Looking for a website review?</h3>
+          <h2>Looking for a website review?</h2>
           <p>
             If you want a detailed technical teardown of your site’s speed, Core Web Vitals, and AI visibility, we recommend requesting our dedicated audit.
           </p>
@@ -147,9 +173,241 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
       </div>
     </div>
   </section>
+
+  <!-- 2. How We Can Help Your Business Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="label-mono">SERVICE EXPERTISE</span>
+        <h2>How We Can Help Your Business Grow</h2>
+        <p class="section-subtitle">
+          From technical search infrastructure to answer engine citation models, we provide comprehensive solutions that drive qualified customer acquisition.
+        </p>
+      </div>
+
+      <div class="help-cards-grid">
+        <div class="info-card">
+          <div class="info-card__icon"><Icon name="search" size={24} /></div>
+          <h3>Organic Search Visibility (SEO)</h3>
+          <p>
+            We audit, restructure, and optimize your web presence to capture high-intent commercial keywords on Google and Bing, turning organic search demand into predictable customer revenue.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card__icon"><Icon name="sparkles" size={24} /></div>
+          <h3>AI Answer Citations (AEO &amp; GEO)</h3>
+          <p>
+            We prepare your brand for modern conversational search by implementing answer-first copy, modular formatting, and curated knowledge files so ChatGPT, Perplexity, and Gemini cite you directly.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card__icon"><Icon name="check" size={24} /></div>
+          <h3>Technical SEO &amp; Core Web Vitals</h3>
+          <p>
+            We resolve crawl budget waste, faceted navigation indexing bloat, redirect loops, and slow LCP/CLS metrics to guarantee search bots index your assets without friction.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card__icon"><Icon name="globe" size={24} /></div>
+          <h3>SEO-Friendly Website Development</h3>
+          <p>
+            We design and build ultra-fast, static websites on Astro that achieve 100/100 Core Web Vitals with 0 KB runtime JavaScript bloat, ensuring maximum technical performance.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card__icon"><Icon name="arrow-right" size={24} /></div>
+          <h3>Vertical-Specific Growth Strategies</h3>
+          <p>
+            We develop customized digital growth programs tailored specifically for local service providers, fast-growing D2C brands, and multi-SKU e-commerce storefronts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. What Can You Discuss With Us? Section -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">PROJECT SCOPE &amp; TOPICS</span>
+        <h2>What Can You Discuss With Us?</h2>
+        <p class="section-subtitle">
+          Our team welcomes technical discussions, strategic advisory enquiries, and project scoping across every stage of your digital growth roadmap.
+        </p>
+      </div>
+
+      <div class="discuss-grid">
+        <div class="discuss-item">
+          <span class="discuss-num">01</span>
+          <div>
+            <h3>SEO and Organic Search Growth</h3>
+            <p>Diagnose organic traffic drops, evaluate competitor keyword gaps, build topical authority clusters, and plan long-term search acquisition.</p>
+          </div>
+        </div>
+
+        <div class="discuss-item">
+          <span class="discuss-num">02</span>
+          <div>
+            <h3>AEO and GEO Strategy</h3>
+            <p>Structure your brand entity, implement structured FAQ schema, and optimize for Google AI Overviews, SearchGPT, and Perplexity answer cards.</p>
+          </div>
+        </div>
+
+        <div class="discuss-item">
+          <span class="discuss-num">03</span>
+          <div>
+            <h3>Website Development and Redesign</h3>
+            <p>Plan a high-speed Jamstack or Astro build, migrate from slow WordPress/Wix setups, and preserve established search equity during redesigns.</p>
+          </div>
+        </div>
+
+        <div class="discuss-item">
+          <span class="discuss-num">04</span>
+          <div>
+            <h3>Technical SEO Audits</h3>
+            <p>Review comprehensive crawlability reports, internal linking graphs, structured schema markup integrity, and Core Web Vitals remediation roadmaps.</p>
+          </div>
+        </div>
+
+        <div class="discuss-item">
+          <span class="discuss-num">05</span>
+          <div>
+            <h3>Local Search and Google Business Profile</h3>
+            <p>Dominate the local Google 3-Pack, audit multi-location NAP consistency, optimize service attributes, and scale authentic customer review velocity.</p>
+          </div>
+        </div>
+
+        <div class="discuss-item">
+          <span class="discuss-num">06</span>
+          <div>
+            <h3>E-Commerce SEO and Storefront Optimization</h3>
+            <p>Tame faceted navigation parameter bloat, optimize collection hierarchies, deploy automated Product schema, and accelerate mobile checkout speed.</p>
+          </div>
+        </div>
+
+        <div class="discuss-item">
+          <span class="discuss-num">07</span>
+          <div>
+            <h3>Digital Marketing &amp; Performance Marketing</h3>
+            <p>Blend organic search foundations with high-converting paid search (Google Ads) and paid social (Meta) campaigns for predictable customer acquisition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. What Happens After You Contact Us? Section -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="label-mono">THE ENGAGEMENT PROCESS</span>
+        <h2>What Happens After You Contact Us?</h2>
+        <p class="section-subtitle">
+          We maintain a transparent, no-pressure process focused on understanding your technical bottlenecks and business goals before recommending any engagement.
+        </p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-card__badge">Step 1</div>
+          <h3>Submit Your Enquiry</h3>
+          <p>
+            Fill out the contact form above with your website URL, primary service interest, and any specific search or performance challenges your team is facing.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__badge">Step 2</div>
+          <h3>Requirements &amp; Technical Review</h3>
+          <p>
+            Our technical search specialists review your enquiry, run a preliminary diagnostic on your domain’s indexation and technical setup, and evaluate your market landscape.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__badge">Step 3</div>
+          <h3>Discovery Call &amp; Next Steps</h3>
+          <p>
+            We get in touch via email or phone to discuss your project requirements, clarify scope, present actionable opportunities, and outline clear next steps.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Who We Work With Section -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-mono">TARGET AUDIENCE</span>
+        <h2>Who We Work With</h2>
+        <p class="section-subtitle">
+          We partner with organizations where search visibility, technical speed, and AI answer citations directly impact customer acquisition and bottom-line revenue.
+        </p>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <div class="audience-card__header">
+            <span class="audience-tag">Physical &amp; Regional</span>
+            <h3>Local Businesses</h3>
+          </div>
+          <p>
+            Independent clinics, legal practices, retail showrooms, and home service providers seeking to capture local neighborhood demand and dominate Google Maps 3-Pack results.
+          </p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-card__header">
+            <span class="audience-tag">Consumer Brands</span>
+            <h3>D2C Brands</h3>
+          </div>
+          <p>
+            Emerging and scaling consumer goods brands aiming to break free from rising paid ad costs by building long-term organic search authority, social proof, and AI citations.
+          </p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-card__header">
+            <span class="audience-tag">Multi-SKU Retail</span>
+            <h3>E-Commerce Stores</h3>
+          </div>
+          <p>
+            Online merchants operating on Shopify, WooCommerce, or custom platforms needing structured catalog hierarchies, faceted navigation cleanup, and automated Product schemas.
+          </p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-card__header">
+            <span class="audience-tag">Modern Platforms</span>
+            <h3>New Builds &amp; Redesigns</h3>
+          </div>
+          <p>
+            Businesses planning a modern, high-speed website build or migration seeking 100/100 Core Web Vitals, 0 KB JavaScript bloat, and enterprise-grade search architecture from day one.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ Section -->
+  <section class="section section--mist">
+    <div class="container container--narrow">
+      <Faq
+        title="Frequently Asked Questions"
+        subtitle="Common questions about contacting Findable, our service scope, and technical engagement workflows."
+        items={contactFaqs}
+      />
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
+  /* 1. Layout & Hero */
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -168,7 +426,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
   }
 
   .contact-intro {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: var(--text-muted);
     margin-bottom: var(--space-6);
@@ -193,6 +451,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
   .detail-row :global(svg) {
     color: var(--orange);
     margin-top: 0.15rem;
+    flex-shrink: 0;
   }
 
   .detail-row strong {
@@ -213,9 +472,10 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     border: var(--border);
     border-radius: var(--radius-md);
     padding: var(--space-5);
+    background-color: var(--paper);
   }
 
-  .audit-prompt h3 {
+  .audit-prompt h2 {
     font-size: 1.15rem;
     margin-bottom: var(--space-2);
   }
@@ -229,6 +489,14 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
   .audit-link {
     font-family: var(--font-heading);
     font-weight: 700;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .audit-link:hover {
+    color: var(--orange);
   }
 
   /* Form */
@@ -284,6 +552,7 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     background-color: #fff;
     color: var(--ink);
     font-size: 1rem;
+    font-family: var(--font-body);
   }
 
   .form-group textarea {
@@ -308,5 +577,228 @@ const web3FormsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     width: 100%;
     margin-top: var(--space-2);
   }
-</style>
 
+  /* Shared Section Headers */
+  .section-header {
+    margin-bottom: var(--space-7);
+    max-width: 48rem;
+  }
+
+  .section-header.text-center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .section-header h2 {
+    margin-block: var(--space-2) var(--space-3);
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* 2. Help Cards Grid */
+  .help-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  @media (min-width: 640px) {
+    .help-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .help-cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .help-cards-grid > :nth-child(4) {
+      grid-column: span 1;
+    }
+    .help-cards-grid > :nth-child(5) {
+      grid-column: span 2;
+    }
+  }
+
+  .info-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .info-card__icon {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mist);
+    border-radius: var(--radius-sm);
+    color: var(--orange);
+  }
+
+  .info-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .info-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* 3. Discuss Grid */
+  .discuss-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  @media (min-width: 768px) {
+    .discuss-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .discuss-item {
+    background-color: var(--mist);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .discuss-num {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--orange);
+    background-color: var(--paper);
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    border: var(--border);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .discuss-item h3 {
+    font-size: 1.1rem;
+    margin: 0 0 var(--space-1) 0;
+  }
+
+  .discuss-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* 4. Process Steps */
+  .process-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 860px) {
+    .process-steps {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .step-card {
+    background-color: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .step-card__badge {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--ink);
+    color: var(--lime);
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .step-card h3 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .step-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* 5. Audience Grid */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  @media (min-width: 768px) {
+    .audience-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .audience-card {
+    background-color: var(--mist);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .audience-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: var(--space-1);
+  }
+
+  .audience-card h3 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .audience-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .container--narrow {
+    max-width: 52rem;
+  }
+</style>
