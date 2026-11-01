@@ -70,6 +70,14 @@ export function buildPageSchema(options: PageSchemaOptions) {
       description: siteConfig.description,
       email: siteConfig.contact.email,
       telephone: siteConfig.contact.phone,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '50/B, N.C. Pakrashi Lane, Near Shivtala',
+        addressLocality: 'Rishra',
+        addressRegion: 'West Bengal',
+        postalCode: '712248',
+        addressCountry: 'IN',
+      },
       founder: { '@id': founderId },
       areaServed: siteConfig.contact.serviceAreas,
       knowsAbout: [
