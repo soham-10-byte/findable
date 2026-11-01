@@ -119,24 +119,26 @@ export function buildPageSchema(options: PageSchemaOptions) {
 
   // Breadcrumbs
   if (options.breadcrumbs && options.breadcrumbs.length > 0) {
-    const breadcrumbListEntity = {
-      '@type': 'BreadcrumbList',
-      '@id': `${options.url}#breadcrumb`,
-      itemListElement: options.breadcrumbs.map((crumb, idx) => ({
-        '@type': 'ListItem',
-        position: idx + 1,
-        name: crumb.name,
-        ...(crumb.url
-          ? {
-              item: crumb.url.startsWith('http')
-                ? crumb.url
-                : `${baseDomain}${crumb.url.startsWith('/') ? crumb.url : `/${crumb.url}`}`,
-            }
-          : {}),
-      })),
-    };
-    graph.push(breadcrumbListEntity);
-    webpageEntity.breadcrumb = { '@id': `${options.url}#breadcrumb` };
+    const validCrumbs = options.breadcrumbs.filter(
+      (crumb) => typeof crumb.url === 'string' && crumb.url.trim() !== ''
+    );
+
+    if (validCrumbs.length > 0) {
+      const breadcrumbListEntity = {
+        '@type': 'BreadcrumbList',
+        '@id': `${options.url}#breadcrumb`,
+        itemListElement: validCrumbs.map((crumb, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: crumb.name,
+          item: crumb.url!.startsWith('http')
+            ? crumb.url!
+            : `${baseDomain}${crumb.url!.startsWith('/') ? crumb.url! : `/${crumb.url!}`}`,
+        })),
+      };
+      graph.push(breadcrumbListEntity);
+      webpageEntity.breadcrumb = { '@id': `${options.url}#breadcrumb` };
+    }
   }
 
   // Service
