@@ -1,6 +1,6 @@
 ---
 title: "The Comprehensive On-Page SEO Checklist for 2026"
-description: "Master on-page SEO in 2026. The definitive technical checklist for title tags, heading structure, content semantics, entity optimization, and Core Web Vitals."
+description: "Follow this 2026 on-page SEO checklist covering title tags, headings, content structure, entities and Core Web Vitals."
 pubDate: 2026-02-13
 author: "Ms. Debopriya Mullick"
 tags: ["On-Page SEO", "Technical SEO", "SEO Checklist", "Search Optimization"]

@@ -1,8 +1,8 @@
 ---
 title: "Google Business Profile Optimization Guide: Rank #1 on Maps (2026)"
 seoTitle: "Google Business Profile Optimization Guide | Findable"
-description: "A comprehensive guide to optimizing your Google Business Profile (formerly GMB). Learn category selection, photo strategy, Q&A, and review management to dominate local search."
-seoDescription: "Optimize your Google Business Profile to rank #1 on Google Maps. Learn category selection, photo strategy, review acquisition, and local citation management."
+description: "Learn to optimize your Google Business Profile with the right categories, photos, reviews and local citations."
+seoDescription: "Learn to optimize your Google Business Profile with the right categories, photos, reviews and local citations."
 pubDate: 2026-02-09
 author: "Ms. Debopriya Mullick"
 tags: ["Google Business Profile", "Local SEO", "Google Maps", "Local Marketing"]
