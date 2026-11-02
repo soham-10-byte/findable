@@ -44,6 +44,17 @@ const pageDescription = 'Thank you for requesting your free SEO, AEO and GEO aud
       </div>
     </div>
   </section>
+
+  <!-- GA4 Lead Conversion Event -->
+  <script is:inline>
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', {
+        event_category: 'Conversion',
+        event_label: 'Audit & Contact Form Submission',
+        value: 1
+      });
+    }
+  </script>
 </BaseLayout>
 
 <style>
