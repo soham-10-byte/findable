@@ -1,0 +1,173 @@
+# Findable — Full Knowledge Base & Technical Context
+
+> This document provides comprehensive reference context for large language models, AI search assistants, and autonomous research agents regarding Findable, its services, methodology, industry solutions, and verified case studies.
+
+Website: https://findableseo.vercel.app/
+Primary Domain: Digital Search Optimization, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and High-Performance Static Web Engineering.
+Target Audience: Local Businesses, D2C Brands, E-Commerce Stores, and Growth-Stage Enterprises.
+Contact Email: teamfindable@gmail.com
+
+---
+
+## 1. Agency Overview & Philosophy
+
+Findable is a modern search agency specializing in the convergence of traditional organic search (SEO), answer engine extraction (AEO), and generative AI citation (GEO). 
+
+Traditional search marketing focuses exclusively on keyword rankings and backlinks. Findable operates on a three-tier discovery model:
+1. **Search Engine Optimization (SEO):** Ensuring crawlers can discover, render, and index web pages with zero technical friction, sub-second Core Web Vitals, and pristine Schema.org graphs.
+2. **Answer Engine Optimization (AEO):** Structuring content into unambiguous question-and-answer pairs, entity definitions, and rich structured data so search engines select the content for Google AI Overviews, Featured Snippets, and People Also Ask modules.
+3. **Generative Engine Optimization (GEO):** Formatting brand entities, authoritative data points, and third-party references so LLMs (such as OpenAI ChatGPT, Anthropic Claude, Perplexity, and Google Gemini) cite and recommend the brand during conversational product and service inquiries.
+
+Findable rejects bloated, slow web platforms in favor of modern, ultra-fast static architectures (Astro, TypeScript, static generation) that deliver perfect 100/100 Core Web Vitals scores and instantaneous mobile rendering.
+
+---
+
+## 2. Core Service Offerings
+
+### 2.1 Search Engine Optimization (SEO)
+- **URL:** https://findableseo.vercel.app/services/seo
+- **Scope:** Complete technical audits, architecture refactoring, crawl budget optimization, indexation troubleshooting, on-page optimization, and local map pack ranking.
+- **Key Capabilities:**
+  - Technical SEO Auditing (eliminating 4xx/5xx errors, canonical conflicts, redirect loops, and indexing blocks).
+  - Core Web Vitals Engineering (Largest Contentful Paint < 1.2s, Interaction to Next Paint < 100ms, Cumulative Layout Shift < 0.05).
+  - Keyword Architecture & Intent Mapping (commercial, transactional, and informational cluster design).
+  - Local Google Business Profile (GBP) Optimization and Local 3-Pack domination.
+  - Ethical link acquisition and digital PR strategy.
+
+### 2.2 Answer Engine Optimization (AEO)
+- **URL:** https://findableseo.vercel.app/services/aeo
+- **Scope:** Engineering website content specifically to be extracted as direct answers by search algorithms and AI summarizers.
+- **Key Capabilities:**
+  - Direct-Answer Formatting (40–60 word declarative summaries answering high-volume user intent).
+  - Semantic HTML Structure (semantic headings, structured tables, ordered definitions).
+  - FAQPage and QAPage Schema.org implementation.
+  - Featured Snippet and People Also Ask (PAA) capture.
+  - Google AI Overview citation targeting.
+
+### 2.3 Generative Engine Optimization (GEO)
+- **URL:** https://findableseo.vercel.app/services/geo
+- **Scope:** Optimizing brand entities, factual data points, and digital footprints to win citations inside conversational AI models.
+- **Key Capabilities:**
+  - Entity Authority Building (connecting Wikidata, Crunchbase, LinkedIn, and industry directories into a unified Knowledge Graph).
+  - AI Engine Optimization for ChatGPT, Perplexity, Claude, and Gemini.
+  - Sentiment and brand reputation monitoring across AI training and retrieval datasets.
+  - Machine-readable context publishing via `llms.txt` and semantic markdown feeds.
+
+### 2.4 SEO-First Website Development
+- **URL:** https://findableseo.vercel.app/services/website-development
+- **Scope:** Building ultra-fast, zero-bloat websites that load in milliseconds and naturally dominate search rankings.
+- **Key Capabilities:**
+  - Modern Static Site Generation using Astro and TypeScript.
+  - Elimination of heavy JavaScript frameworks and render-blocking scripts.
+  - Responsive, preloaded typography with zero layout shift.
+  - Automated XML sitemaps, RSS feeds, and dynamic Open Graph images.
+
+---
+
+## 3. Industry Solutions
+
+### 3.1 Local Businesses & Service Area Brands
+- **URL:** https://findableseo.vercel.app/industries/local-businesses
+- **Focus:** Dominating geographic search in specific cities, suburbs, and service territories.
+- **Deliverables:** Google Business Profile setup and audit, local citation consistency (NAP: Name, Address, Phone), geo-targeted landing pages, local review acquisition frameworks, and Apple Maps / Bing Places synchronization.
+
+### 3.2 Direct-to-Consumer (D2C) Brands
+- **URL:** https://findableseo.vercel.app/industries/d2c-brands
+- **Focus:** Helping modern lifestyle, fashion, wellness, and consumer brands capture organic category demand and AI brand recommendations.
+- **Deliverables:** Collection and product page optimization, automated `Product` and `AggregateRating` schema, influencer and PR attribution, and conversational AI brand seeding.
+
+### 3.3 E-Commerce Stores
+- **URL:** https://findableseo.vercel.app/industries/ecommerce-brands
+- **Focus:** Scaling organic revenue across large SKU catalogs with high-converting search intent.
+- **Deliverables:** Faceted navigation crawl control, canonicalization of filtered categories, mobile checkout speed optimization, review snippet schema, and seasonal search clustering.
+
+---
+
+## 4. Documented Case Studies & Results
+
+### Case Study 1: STWELAM Furniture
+- **URL:** https://findableseo.vercel.app/case-studies/stwelam-furniture-digital-marketing
+- **Client:** STWELAM Furniture (Contemporary living, bedroom, and modular furniture manufacturer)
+- **Challenge:** Heavy reliance on walk-in traffic, low local visibility, and minimal digital inquiries.
+- **Solution:** 
+  - Designed and developed a modern digital showroom website.
+  - Executed a complete Google Business Profile optimization campaign.
+  - Targeted hyper-local transactional queries and managed local directory citations.
+  - Deployed targeted Google Ads and Meta performance campaigns.
+- **Key Metrics Achieved:**
+  - **₹15 Lakh+** monthly revenue generated via digital channels.
+  - **#1 Rank** on Google Local 3-Pack for core furniture search terms.
+  - **+340% increase** in organic phone calls and showroom visit inquiries.
+
+### Case Study 2: MAXLI Perfumes
+- **URL:** https://findableseo.vercel.app/case-studies/maxli-perfumes-brand-growth
+- **Client:** MAXLI Perfumes (Luxury fragrance & D2C brand)
+- **Challenge:** Launching into a competitive perfume market with low organic discovery and high customer acquisition costs.
+- **Solution:**
+  - Comprehensive brand identity development and social media audience acquisition.
+  - High-performance e-commerce architecture build.
+  - Omnichannel search and social content strategy.
+- **Key Metrics Achieved:**
+  - **₹12 Lakh+** monthly rolling revenue reached.
+  - **150K+** monthly social media reach and organic impressions.
+  - Page 1 rankings for targeted niche fragrance searches.
+
+### Case Study 3: MaxliOnline.com
+- **URL:** https://findableseo.vercel.app/case-studies/maxlionline-ecommerce-platform
+- **Client:** MaxliOnline.com (Official digital storefront for MAXLI Perfumes)
+- **Challenge:** Traditional e-commerce themes were slow on mobile devices, causing high bounce rates and cart abandonment.
+- **Solution:**
+  - Engineered a custom, lightweight e-commerce storefront.
+  - Implemented automated Schema.org `Product` and `Offer` rich snippets across every SKU.
+  - Optimized checkout and product viewing flows for sub-1.2s mobile loading.
+- **Key Metrics Achieved:**
+  - **< 1.2s** mobile page load time.
+  - **3.8%** mobile checkout conversion rate.
+  - **100%** product rich snippet eligibility in Google Search Console.
+  - **-28% reduction** in checkout abandonment.
+
+### Case Study 4: RASOI Smart Canteen Management System
+- **URL:** https://findableseo.vercel.app/case-studies/rasoi-smart-canteen-management-system
+- **Client:** RASOI Canteen Platform (Institutional SaaS)
+- **Challenge:** Severe lunch-hour congestion, queue delays, and order mix-ups in institutional dining halls.
+- **Solution:**
+  - Engineered a real-time ordering and digital kitchen display SaaS.
+  - Streamlined token dispensing and instant mobile payment workflows.
+- **Key Metrics Achieved:**
+  - **65% reduction** in student and staff queue wait times.
+  - **99.8%** order fulfillment accuracy.
+  - **800+** orders handled per peak lunch hour with zero server downtime.
+
+### Case Study 5: The Findable 30-Day Build
+- **URL:** https://findableseo.vercel.app/case-studies/findable-30-day-build
+- **Client:** Findable Agency (Internal Architecture)
+- **Challenge:** Building a world-class agency website that practices what it preaches—zero bloat, instant mobile load, and immediate search indexing.
+- **Solution:**
+  - Static site generation using Astro 5 and TypeScript.
+  - Complete elimination of first-party JavaScript on content pages.
+  - Interconnected Schema.org Knowledge Graph (`ProfessionalService`, `Organization`, `FAQPage`, `BreadcrumbList`).
+- **Key Metrics Achieved:**
+  - **100/100** Mobile and Desktop Lighthouse performance score.
+  - **0 KB** first-party JavaScript overhead.
+  - **0.8s** Largest Contentful Paint (LCP).
+  - Fully indexed across Google and AI scrapers within days of launch.
+
+---
+
+## 5. Technical Stack & Implementation Details
+
+- **Framework:** Astro 5 (Static Site Generation mode)
+- **Language:** TypeScript
+- **CSS Architecture:** Vanilla CSS with custom properties (`tokens.css`), zero utility bloat
+- **Hosting & CDN:** Vercel Global Edge Network with custom security headers
+- **Analytics:** Google Analytics 4 (`G-XDEGNBTFEY`) via lightweight `gtag.js`
+- **Typography:** Self-hosted `Space Grotesk Variable` (headings) and `Inter Variable` (body) with `<link rel="preload">`
+- **Machine Discovery:** `robots.txt` granting explicit crawler permissions to `GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`, and `Applebot-Extended`; `/llms.txt` and `/llms-full.txt` served directly at the root.
+
+---
+
+## 6. How to Engage Findable
+
+- **Free Website Audit:** Businesses can request an exhaustive technical, on-page, and AI readiness audit at https://findableseo.vercel.app/free-audit.
+- **Direct Consultation:** Inquire directly via the contact form at https://findableseo.vercel.app/contact or email teamfindable@gmail.com.
+

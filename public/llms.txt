@@ -1,20 +1,51 @@
 # Findable
 
-Findable is an SEO, AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization) agency helping local, D2C, and e-commerce brands get found on Google, cited by AI engines, and chosen by customers.
+> Findable is an SEO, AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization) technical agency helping local businesses, D2C brands, and e-commerce companies achieve dominant rankings on Google, high-authority citations across AI search engines (ChatGPT, Perplexity, Claude, Gemini), and predictable customer acquisition.
 
-## Key Pages
+Findable specializes in technical search optimization, mobile Core Web Vitals engineering, static architecture, Schema.org semantic graphs, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO).
 
-- https://findableseo.vercel.app/: Homepage - agency overview, core services, proof, and free audit request.
-- https://findableseo.vercel.app/services: Overview of all services (SEO, AEO, GEO, and SEO-friendly Web Development).
-- https://findableseo.vercel.app/services/seo: Search Engine Optimization for local, D2C, and e-commerce brands.
-- https://findableseo.vercel.app/services/aeo: Answer Engine Optimization for featured snippets, People Also Ask, and Google AI Overviews.
-- https://findableseo.vercel.app/services/geo: Generative Engine Optimization for AI citations across ChatGPT, Perplexity, Claude, and Gemini.
-- https://findableseo.vercel.app/services/website-development: SEO-first, ultra-fast static web development meeting Core Web Vitals.
-- https://findableseo.vercel.app/industries/local-businesses: Local SEO, Google Business Profile, and local pack ranking.
-- https://findableseo.vercel.app/industries/d2c-brands: Organic search and AI search visibility for direct-to-consumer brands.
-- https://findableseo.vercel.app/industries/ecommerce-brands: E-commerce SEO for category, collection, and product pages.
-- https://findableseo.vercel.app/free-audit: Free comprehensive SEO, AEO, and GEO technical audit.
-- https://findableseo.vercel.app/case-studies: Documented proof and results from search and AI optimization campaigns.
-- https://findableseo.vercel.app/blog: Guides and technical teardowns on SEO, AEO, and GEO.
-- https://findableseo.vercel.app/about: Company mission, founder information, and entity credentials.
-- https://findableseo.vercel.app/contact: Direct contact form, consultation requests, and service details.
+For the complete unabridged knowledge base and detailed case study analyses, see [Full Knowledge Base](https://findableseo.vercel.app/llms-full.txt).
+
+## Core Services
+
+- [Search Engine Optimization (SEO)](https://findableseo.vercel.app/services/seo): Technical, on-page, and local SEO services designed to increase search rankings, fix Core Web Vitals, and capture customer demand.
+- [Answer Engine Optimization (AEO)](https://findableseo.vercel.app/services/aeo): Optimization for direct answers in Google AI Overviews, featured snippets, and People Also Ask modules.
+- [Generative Engine Optimization (GEO)](https://findableseo.vercel.app/services/geo): Brand positioning and technical formatting for citations across LLM engines like ChatGPT, Perplexity, Claude, and Gemini.
+- [SEO-First Website Development](https://findableseo.vercel.app/services/website-development): Static, zero-bloat web development with Astro, delivering sub-second load times and 100/100 Core Web Vitals scores.
+- [All Services Hub](https://findableseo.vercel.app/services): Complete portfolio of Findable's organic search, AI discovery, and performance engineering solutions.
+
+## Industry Solutions
+
+- [Local Businesses & GBP](https://findableseo.vercel.app/industries/local-businesses): Google Business Profile ranking, local 3-pack dominance, and localized citation management.
+- [D2C Brands](https://findableseo.vercel.app/industries/d2c-brands): Organic search architecture, automated product schema, and AI brand citation for direct-to-consumer businesses.
+- [E-commerce Stores](https://findableseo.vercel.app/industries/ecommerce-brands): Collection, category, and product page optimization designed for high-conversion search traffic.
+
+## Case Studies & Measurable Proof
+
+- [STWELAM Furniture](https://findableseo.vercel.app/case-studies/stwelam-furniture-digital-marketing): Scaling monthly revenue to ₹15 Lakh+ via local SEO, #1 Google Maps rankings, and targeted performance marketing.
+- [MAXLI Perfumes Brand Growth](https://findableseo.vercel.app/case-studies/maxli-perfumes-brand-growth): Scaling a luxury D2C fragrance brand to ₹12 Lakh+ monthly rolling revenue and 150K+ monthly social reach.
+- [MaxliOnline E-Commerce Platform](https://findableseo.vercel.app/case-studies/maxlionline-ecommerce-platform): Sub-1.2s mobile storefront with 100% rich snippets product schema, 3.8% mobile conversion rate, and -28% checkout abandonment.
+- [RASOI Canteen Platform](https://findableseo.vercel.app/case-studies/rasoi-smart-canteen-management-system): SaaS platform digitizing school and college canteens, cutting queue wait times by 65% with 99.8% order accuracy.
+- [Findable 30-Day Build](https://findableseo.vercel.app/case-studies/findable-30-day-build): Engineering Findable's own website with 100/100 Mobile Lighthouse, 0 KB first-party JS, and 0.8s LCP.
+- [All Case Studies](https://findableseo.vercel.app/case-studies): Full library of documented case studies and technical implementations.
+
+## Company & Inquiries
+
+- [About Findable](https://findableseo.vercel.app/about): Agency background, founder details, philosophy, and technical methodology.
+- [Free Website Audit](https://findableseo.vercel.app/free-audit): Request a comprehensive manual and automated SEO, AEO, and GEO technical audit.
+- [Contact](https://findableseo.vercel.app/contact): Direct consultation inquiries, project discovery, and office details.
+
+## Optional
+
+### Core Educational Guides
+
+- [What is AEO?](https://findableseo.vercel.app/blog/what-is-aeo): Definitive guide to Answer Engine Optimization, structure, and direct-answer formatting.
+- [What is GEO?](https://findableseo.vercel.app/blog/what-is-geo): Guide to Generative Engine Optimization and AI citation models.
+- [AEO vs GEO vs SEO](https://findableseo.vercel.app/blog/aeo-vs-geo-vs-seo): Technical breakdown of the differences between traditional SEO, answer engines, and generative LLMs.
+- [AEO Checklist: How to Appear in AI Answers](https://findableseo.vercel.app/blog/aeo-checklist-how-to-appear-in-ai-answers): Actionable checklist for winning AI Overviews and answer engine summaries.
+- [ChatGPT & Gemini Visibility Guide for Local Businesses](https://findableseo.vercel.app/blog/chatgpt-gemini-visibility-guide-local-businesses): How local brands can get cited in AI assistant queries.
+- [On-Page SEO Checklist 2026](https://findableseo.vercel.app/blog/on-page-seo-checklist-2026): Modern on-page optimization steps for search and AI readiness.
+- [Google Business Profile Optimization Guide](https://findableseo.vercel.app/blog/google-business-profile-optimization-guide): Ranking in local map packs and driving phone calls and foot traffic.
+- [E-Commerce SEO Audit Checklist](https://findableseo.vercel.app/blog/ecommerce-seo-audit-checklist): Systematic technical audit checklist for online retail stores.
+- [LLM SEO vs Traditional SEO](https://findableseo.vercel.app/blog/llm-seo-vs-traditional-seo): Understanding how large language models retrieve and reference web data.
+- [Full Blog Archive](https://findableseo.vercel.app/blog): Complete index of guides on SEO pricing, competitor analysis, tools, and technical strategies.
