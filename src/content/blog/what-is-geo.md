@@ -42,5 +42,5 @@ Ensure your brand's core entity identity is unambiguous. Maintain identical defi
 ### 3. Original Data and Proof Points
 AI engines favor sources that provide primary evidence: benchmarks, original case studies, and exact step-by-step methodologies. Generic content is summarized into oblivion, but original data is quoted with attribution.
 
-Read more in our [Generative Engine Optimization services](/services/geo) or check out our comparison between [AEO vs GEO vs SEO](/blog/aeo-vs-geo-vs-seo).
+Read more in our [Generative Engine Optimization services](/services/geo), compare strategies in our guide on [AEO vs GEO vs SEO](/blog/aeo-vs-geo-vs-seo), or claim your [Free AI Search Audit](/free-audit) to benchmark your brand's citations across ChatGPT and Perplexity.
 

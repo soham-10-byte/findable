@@ -99,5 +99,5 @@ You don't need a massive software budget to win at search. An unbeatable small b
 2. **SE Ranking** ($44/mo) for rank tracking and audits.
 3. **Screaming Frog** (Free) for technical health checks.
 
-Want expert execution without spending hours learning software? Explore our transparent [SEO Services for Small Businesses](/industries/local-businesses) or claim your [Free 48-Hour Search Audit](/free-audit).
+Want expert execution without spending hours learning software? Explore our transparent [Search Engine Optimization (SEO) services](/services/seo), review our [Local Business solutions](/industries/local-businesses), or claim your [Free 48-Hour Search Audit](/free-audit).
 

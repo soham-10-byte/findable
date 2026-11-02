@@ -139,5 +139,5 @@ Shoppers ask specific, transactional questions before entering credit card detai
 
 ## Scale Your Ecommerce Search Revenue
 
-Need an expert team to optimize your Shopify, WooCommerce, or custom headless catalog? Explore our specialized [Ecommerce SEO Services](/industries/ecommerce-brands) or claim a [Free 48-Hour Ecommerce Audit](/free-audit).
+Need an expert team to optimize your Shopify, WooCommerce, or custom headless catalog? Explore our technical [SEO services](/services/seo), review our specialized [Ecommerce SEO solutions](/industries/ecommerce-brands), see how we built the sub-second [MaxliOnline storefront](/case-studies/maxlionline-ecommerce-platform), or claim a [Free 48-Hour Ecommerce Audit](/free-audit).
 

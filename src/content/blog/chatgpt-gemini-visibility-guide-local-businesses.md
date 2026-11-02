@@ -116,5 +116,5 @@ When an AI engine parses this review, it indexes the keywords **laser acne thera
 
 ## Put Your Local Brand at the Top of AI Recommendations
 
-At **Findable**, we bridge traditional local SEO with cutting-edge AI citation engineering. Check out our [Local Business Services](/industries/local-businesses) or claim your [Free Local & AI Search Audit](/free-audit).
+At **Findable**, we bridge traditional local SEO with cutting-edge AI citation engineering. Explore our dedicated [Generative Engine Optimization (GEO) services](/services/geo) and [Answer Engine Optimization (AEO) services](/services/aeo), review our [Local Business SEO solutions](/industries/local-businesses), or claim your [Free Local & AI Search Audit](/free-audit).
 

@@ -35,5 +35,5 @@ To maximize ROI without wasted effort, implement optimizations in this chronolog
 2. **Phase 2: AEO Content Structuring:** Restructure existing content so answers precede explanations. Convert ambiguous paragraphs into numbered lists and concise comparison tables.
 3. **Phase 3: GEO Authority Building:** Build corroborating entity profiles across high-authority external platforms, earn verified customer reviews, and publish proprietary benchmarks.
 
-Explore our comprehensive [SEO Services](/services/seo), [AEO Services](/services/aeo), and [GEO Agency Services](/services/geo) to build a unified search presence.
+Explore our comprehensive [SEO Services](/services/seo), [AEO Services](/services/aeo), and [GEO Agency Services](/services/geo) to build a unified search presence, or request a [Free Multi-Search Audit](/free-audit) to benchmark your visibility across Google, ChatGPT, and Perplexity.
 

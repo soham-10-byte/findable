@@ -118,5 +118,5 @@ Rich snippets (star ratings, in-stock badges, price drops) increase search click
 
 ## Scale Your Ecommerce Organic Revenue
 
-Managing technical SEO across hundreds or thousands of SKUs requires deep technical precision. Learn how our team optimizes online stores via our [Ecommerce SEO Services](/industries/ecommerce-brands) or request a [Complete 48-Hour Ecommerce SEO Audit](/free-audit).
+Managing technical SEO across hundreds or thousands of SKUs requires deep technical precision. Learn how our team scales online stores through our technical [SEO services](/services/seo) and [E-commerce SEO solutions](/industries/ecommerce-brands), see how we built an ultra-fast store in our [MaxliOnline e-commerce platform case study](/case-studies/maxlionline-ecommerce-platform), or request a [Complete 48-Hour Ecommerce SEO Audit](/free-audit).
 

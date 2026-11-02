@@ -85,5 +85,5 @@ You don't need a single massive enterprise dashboard to perform high-impact SEO.
 * If you primarily need **competitor Google Ads and PPC tracking**, pick **SpyFu**.
 * If you want **zero monthly software overhead**, combine **Screaming Frog + Google Search Console + Google Keyword Planner**.
 
-Ready to dominate organic rankings and answer engine citations? Learn how our team handles technical architecture and content strategy via our [SEO & AEO Services](/services).
+Ready to dominate organic rankings and answer engine citations? Learn how our team handles technical architecture and content strategy via our [SEO & AEO Services](/services), or claim your [Free Technical SEO Audit](/free-audit) identifying your highest-ROI ranking opportunities.
 
