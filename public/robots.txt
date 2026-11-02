@@ -4,4 +4,20 @@
 User-agent: *
 Allow: /
 
+# Explicit AI Search & Discovery Directives
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://findableseo.vercel.app/sitemap.xml

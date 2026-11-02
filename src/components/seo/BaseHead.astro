@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '../../config/site';
+import spaceGroteskLatin from '@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2';
 
 interface Props {
   title: string;
@@ -42,6 +43,15 @@ const robotsContent = noindex
 <meta name="robots" content={robotsContent} />
 <meta name="theme-color" content="#0B0B0C" />
 <meta name="google-site-verification" content="1duhwKziwXrB_oWMUqNvK71AvjKGPxfv4-61KxljLko" />
+
+<!-- Preload primary heading font to eliminate CLS -->
+<link
+  rel="preload"
+  href={spaceGroteskLatin}
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
 
 <!-- Favicons -->
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
