@@ -39,6 +39,15 @@ For the complete unabridged knowledge base and detailed case study analyses, see
 
 ### Core Educational Guides
 
+- [Google AI Overviews Optimization](https://findableseo.vercel.app/blog/google-ai-overviews-optimization-guide): How to rank and earn citations in Google AI Overviews.
+- [Generative Engine Optimization (GEO) Framework](https://findableseo.vercel.app/blog/generative-engine-optimization-practical-framework): Evidence-backed framework for winning citations in ChatGPT, Perplexity, and Claude.
+- [Programmatic SEO & Schema Graphs](https://findableseo.vercel.app/blog/programmatic-seo-and-schema-graph-engineering): Scaling organic search and entity graphs without thin-content penalties.
+- [Technical SEO for Headless Websites](https://findableseo.vercel.app/blog/technical-seo-for-headless-websites-and-core-web-vitals): INP, LCP, and zero-JS static site architectures.
+- [Best Marketing Tools for 2027](https://findableseo.vercel.app/blog/best-marketing-tools-for-2027): Comparison of autonomous AI marketing agents and predictive analytics stacks.
+- [Best AI SEO Tools for 2027](https://findableseo.vercel.app/blog/best-ai-seo-tools-for-2027): Next-gen tools for automated code auditing and LLM citation tracking.
+- [Top 9 AEO Tips for 2027](https://findableseo.vercel.app/blog/best-aeo-tips-for-2027): Winning direct answers and zero-click queries in the post-search era.
+- [Best Marketing Jobs in 2027](https://findableseo.vercel.app/blog/best-marketing-jobs-in-2027-and-skills-to-learn): High-income skills and in-demand career paths in AI marketing.
+- [Future of Search in 2027](https://findableseo.vercel.app/blog/future-of-search-2027-ai-agents-and-the-death-of-ten-blue-links): AI agents, zero-click answers, and the agentic web.
 - [What is AEO?](https://findableseo.vercel.app/blog/what-is-aeo): Definitive guide to Answer Engine Optimization, structure, and direct-answer formatting.
 - [What is GEO?](https://findableseo.vercel.app/blog/what-is-geo): Guide to Generative Engine Optimization and AI citation models.
 - [AEO vs GEO vs SEO](https://findableseo.vercel.app/blog/aeo-vs-geo-vs-seo): Technical breakdown of the differences between traditional SEO, answer engines, and generative LLMs.
