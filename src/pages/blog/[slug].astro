@@ -4,7 +4,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import Tag from '../../components/ui/Tag.astro';
 import Faq from '../../components/ui/Faq.astro';
+import Icon from '../../components/ui/Icon.astro';
 import Cta from '../../components/ui/Cta.astro';
+import { siteConfig } from '../../config/site';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -52,6 +54,8 @@ const formattedUpdatedDate = post.data.updatedDate
   description={pageDescription}
   canonicalURL={canonicalURL}
   type="article"
+  image={post.data.image}
+  imageAlt={post.data.imageAlt || `${post.data.title} | Findable Article`}
   publishedTime={post.data.pubDate.toISOString()}
   modifiedTime={post.data.updatedDate?.toISOString() || post.data.pubDate.toISOString()}
   schemaOptions={{
@@ -103,6 +107,54 @@ const formattedUpdatedDate = post.data.updatedDate
         <div class="prose">
           <Content />
         </div>
+
+        <!-- Author & E-E-A-T Credibility Card -->
+        <section class="post-author-box">
+          <div class="post-author-box__header">
+            <span class="label-mono">AUTHOR &amp; REVIEWER</span>
+            <span class="verified-badge">
+              <Icon name="check" size={14} /> Fact-Checked &amp; Verified
+            </span>
+          </div>
+
+          <div class="post-author-box__body">
+            <div class="post-author-box__avatar" aria-hidden="true">
+              <span>DM</span>
+            </div>
+            <div class="post-author-box__content">
+              <h3 class="post-author-box__name">{post.data.author || siteConfig.founder.name}</h3>
+              <p class="post-author-box__role">{siteConfig.founder.role} &amp; Technical Search Director, Findable</p>
+              <p class="post-author-box__bio">
+                Specialist in technical search engine optimization, Core Web Vitals engineering, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). Advises growth-stage brands and local businesses on organic visibility and AI search discovery.
+              </p>
+              <div class="post-author-box__links">
+                <a href="/about" class="post-author-box__link">
+                  About Findable's Team &rarr;
+                </a>
+                {siteConfig.founder.linkedin && (
+                  <a
+                    href={siteConfig.founder.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="post-author-box__link post-author-box__link--social"
+                  >
+                    LinkedIn Profile <Icon name="external" size={13} />
+                  </a>
+                )}
+                {siteConfig.socials.x && (
+                  <a
+                    href={siteConfig.socials.x}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="post-author-box__link post-author-box__link--social"
+                  >
+                    X (Twitter) <Icon name="external" size={13} />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {post.data.faqs && post.data.faqs.length > 0 && (
           <div class="post-faqs">
@@ -239,6 +291,122 @@ const formattedUpdatedDate = post.data.updatedDate
     margin-top: var(--space-8);
     padding-top: var(--space-7);
     border-top: var(--border);
+  }
+
+  /* Author & E-E-A-T Credibility Box */
+  .post-author-box {
+    margin-top: var(--space-8);
+    padding: var(--space-6);
+    background-color: var(--mist);
+    border: var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .post-author-box__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: var(--border);
+  }
+
+  .verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--olive);
+    background-color: color-mix(in srgb, var(--olive) 15%, transparent);
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+  }
+
+  .post-author-box__body {
+    display: flex;
+    gap: var(--space-5);
+    align-items: flex-start;
+  }
+
+  .post-author-box__avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    min-width: 3.5rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--ink);
+    color: var(--lime);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--ink) 12%, transparent);
+  }
+
+  .post-author-box__content {
+    flex: 1;
+  }
+
+  .post-author-box__name {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+    color: var(--ink);
+  }
+
+  .post-author-box__role {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-3);
+  }
+
+  .post-author-box__bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: var(--space-4);
+  }
+
+  .post-author-box__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    align-items: center;
+  }
+
+  .post-author-box__link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cobalt);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .post-author-box__link:hover {
+    text-decoration: underline;
+  }
+
+  .post-author-box__link--social {
+    color: var(--text-muted);
+  }
+
+  .post-author-box__link--social:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 640px) {
+    .post-author-box__body {
+      flex-direction: column;
+      gap: var(--space-3);
+    }
   }
 </style>
 
